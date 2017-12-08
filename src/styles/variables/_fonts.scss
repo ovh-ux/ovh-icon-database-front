@@ -1,7 +1,26 @@
 $fonts: 'SourceSansPro', 'Source Sans Pro', sans-serif;
 
-$fsBase: 1rem;
 
+//font-sizes
+$fsRatio: 1.25;
+$fsBase: 1.063rem;
+
+$fsS1: $fsBase / $fsRatio; //about 14px
+$fsL1: $fsBase * $fsRatio; //about 21px
+$fsL2: $fsL1 * $fsRatio; //about 27px
+$fsL3: $fsL2 * $fsRatio; //about 33px
+
+//font-weights
 $fwBase: 400;
 $fwMedium: 600;
 $fwLarge: 700;
+
+//line-heights
+$lhBase: 1.5em;
+$lhS1: 1.4em;
+$lhS2: 1.3em;
+
+//letter-spacings
+$lsBase: 0.1em;
+$lsS1: 0.05em;
+$lsS2: -0.05em;

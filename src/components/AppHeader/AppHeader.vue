@@ -1,12 +1,13 @@
 <template>
     <header class="header">
-        <div class="header__container">
-            <h1 class="header__title">
-                <img class="header__title__logo" src="../../assets/logo.svg" alt="Ovh group logo" >
-                <span>UI Kit</span><span class="header__title--colored">{{ title }}</span>
-            </h1>
-            <LoginButton></LoginButton>
-        </div>
+      <h1 class="header__title">
+          <img class="header__title-logo" src="../../assets/logo.svg" alt="OVH group logo">
+          <span class="header__title-app-name">
+            UI Kit
+            <span class="header__title-app-name--colored">{{ title }}</span>
+          </span>
+      </h1>
+      <LoginButton></LoginButton>
     </header>
 </template>
 
