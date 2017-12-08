@@ -1,6 +1,7 @@
 <template>
     <button class="loginButton">
-        Log In
+      <span class="loginButton_icon"></span>
+      <span class="loginButton__label">Log In</span>
     </button>
 </template>
 
@@ -10,17 +11,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.loginButton {
-    float: right;
-    border: none;
-    cursor:pointer;
-    color: white;
-    background-color: transparent;
-    width:110px;
-    height:30px;
-    overflow: hidden;
-    &:hover, &:focus, &:active {
-        font-weight: bold;
-    }
-}
+    @import "./LoginButton.scss";
 </style>
