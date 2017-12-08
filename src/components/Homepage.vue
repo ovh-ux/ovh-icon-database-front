@@ -1,32 +1,17 @@
 <template>
-    <AppHeader></AppHeader>
+    <section>
+        <h2>OVH Icon Database</h2>
+        <Icons></Icons>
+    </section>
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader/AppHeader'
+import Icons from '@/components/Icons'
 
 export default {
     name: 'Homepage',
-    data() {
-        return {
-            icons: [
-              {
-                id: 1,
-                name: 'AntiDdosProtection'
-              },
-              {
-                id: 2,
-                name: 'Bin'
-              },
-              {
-                id: 3,
-                name: 'Chatbot'
-              }
-            ]
-        };
-    },
     components: {
-      AppHeader
+        Icons
     }
 }
 </script>
