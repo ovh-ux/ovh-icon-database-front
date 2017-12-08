@@ -7,9 +7,14 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Homepage',
-      component: Homepage
+        path: '/',
+        name: 'Homepage',
+        component: Homepage
+    },
+    {
+        path: '/upload',
+        name:'Upload',
+        component: Homepage
     }
   ]
 })
