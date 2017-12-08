@@ -8,20 +8,31 @@
     justify-content: space-between;
 
     &__title {
-        display: inline-block;
-        font-weight: normal;
+        display: flex;
+        padding: 0 0 0 $spaceBase;
+        margin: 0;
+        align-items: center;
+        justify-content: flex-start;
 
         &-logo {
           display: inline-block;
+          height: $fsL1;
         }
 
         &-app-name {
-          color: $reverseTextColor;
-          font-size: $fsL2;
+          display: none;
 
-          &--colored {
-              color: $turquoiseBlue;
-              margin-left:5px;
+          @media screen and (min-width: $bpS) {
+            display: inline-block;
+            padding-left: $spaceBase;
+            border-left: solid 2px $reverseTextColor;
+            font-weight: $fwBase;
+            color: $reverseTextColor;
+            font-size: $fsL1;
+
+            &--colored {
+                color: $turquoiseBlue;
+            }
           }
         }
     }
