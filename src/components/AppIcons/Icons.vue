@@ -1,7 +1,7 @@
 <template>
     <ul class="icon-list">
         <AddButton></AddButton>
-        <li class="icon"
+        <li class="icon icon-list__item"
             v-for="icon in icons">
             <span class="icon__name">{{ icon.name }}</span>
         </li>

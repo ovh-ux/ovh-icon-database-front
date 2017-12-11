@@ -1,1 +1,39 @@
 @import "src/styles/variables/_variables";
+
+.icon {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 7.059em;
+    height: 7.059em;
+    padding: $spaceS2;
+    vertical-align: middle;
+    list-style-type: none;
+    background-color: transparent;
+    text-align: center;
+    transition: all 0.16s ease-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $concrete;
+    }
+
+    &--selected {
+      background-color: $concrete;
+      border: solid 1px $pacific;
+    }
+
+    &__name {
+        display: block;
+        word-wrap: break-word;
+    }
+
+    &-list {
+        padding: 0;
+        margin: 0 $spaceS2;
+
+        &__item {
+            margin: $spaceS2;
+        }
+    }
+}
