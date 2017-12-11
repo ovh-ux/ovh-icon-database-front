@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <li>
         <a @click=""></a>
-    </div>
+    </li>
 </template>
 
 <script>

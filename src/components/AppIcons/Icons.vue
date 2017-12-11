@@ -1,8 +1,11 @@
 <template>
-    <section>
+    <ul class="icon-list">
         <AddButton></AddButton>
-        <div v-for="icon in icons">{{ icon.name }}</div>
-    </section>
+        <li class="icon"
+            v-for="icon in icons">
+            <span class="icon__name">{{ icon.name }}</span>
+        </li>
+    </ul>
 </template>
 
 <script>
@@ -32,5 +35,5 @@
 </script>
 
 <style lang="scss" scoped>
-
+    @import "./Icons.scss";
 </style>

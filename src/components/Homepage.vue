@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Icons from '@/components/Icons'
+import Icons from '@/components/AppIcons/Icons'
 
 export default {
     name: 'Homepage',
