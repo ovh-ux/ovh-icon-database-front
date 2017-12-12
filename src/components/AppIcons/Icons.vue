@@ -3,6 +3,10 @@
         <AddButton></AddButton>
         <li class="icon icon-list__item"
             v-for="icon in icons">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="icon__visual">
+                 <use xlink:href="@/components/AppIcons/icons.svg#Bin" />
+            </svg>
             <span class="icon__name">{{ icon.name }}</span>
         </li>
     </ul>

@@ -10,6 +10,7 @@
     list-style-type: none;
     background-color: transparent;
     text-align: center;
+    cursor: pointer;
     transition: all 0.16s ease-out;
 
     &:hover,
@@ -21,6 +22,16 @@
     &--selected {
       background-color: $concrete;
       border: solid 1px $pacific;
+    }
+
+    &__visual {
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: $spaceS2;
+        fill:none;
+        stroke-linejoin:round;
+        stroke-linecap:round;
+        stroke: $textColor;
     }
 
     &__name {
