@@ -1,5 +1,6 @@
 <template>
-    <button class="loginButton">
+    <button class="loginButton"
+            type="button">
       <span class="loginButton__icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
             <circle cx="8" cy="3" r="2.5"/>
