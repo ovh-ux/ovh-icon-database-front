@@ -1,6 +1,12 @@
 <template>
-    <button class="loginButton">
-      <span class="loginButton_icon"></span>
+    <button class="loginButton"
+            type="button">
+      <span class="loginButton__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <circle cx="8" cy="3" r="2.5"/>
+            <path d="M12.5,13a4.5,4.5,0,0,0-9,0v2.5h9Z"/>
+        </svg>
+      </span>
       <span class="loginButton__label">Log In</span>
     </button>
 </template>
