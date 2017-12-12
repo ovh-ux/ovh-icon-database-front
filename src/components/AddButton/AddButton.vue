@@ -1,6 +1,6 @@
 <template>
-    <li>
-        <a @click=""></a>
+    <li class="icon icon-list__item">
+        <a @click="addIcon('toto')">Add</a>
     </li>
 </template>
 

@@ -1,17 +1,11 @@
 <template>
-    <section>
-        <h2>OVH Icon Database</h2>
-        <Icons></Icons>
-    </section>
 </template>
 
 <script>
-import Icons from '@/components/AppIcons/Icons'
 
 export default {
-    name: 'Homepage',
+    name: 'Uploadpage',
     components: {
-        Icons
     }
 }
 </script>
