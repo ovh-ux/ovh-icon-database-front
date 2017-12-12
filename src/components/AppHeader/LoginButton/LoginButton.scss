@@ -35,4 +35,22 @@
         transform: scaleX(1);
       }
     }
+
+    &__icon {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      vertical-align: middle;
+      text-align: center;
+      fill:none;
+      stroke:$reverseTextColor;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    &__label {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 1rem;
+    }
 }
