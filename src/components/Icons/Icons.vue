@@ -2,11 +2,11 @@
     <section>
         <ul class="icon-list">
             <AddButton></AddButton>
-               <Icon
-                    v-for="icon in icons"
-                    v-bind:key="icon.id"
-                    v-bind:icon="icon"
-                ></Icon>
+            <Icon
+                v-for="icon in icons"
+                v-bind:key="icon.id"
+                v-bind:icon="icon"
+            ></Icon>
             </li>
         </ul>
     </section>
