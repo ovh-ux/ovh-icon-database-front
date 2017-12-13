@@ -1,28 +1,39 @@
-.header {
-    background-color: rgba(17, 63, 109, 1);
-    height: 70px;
+@import "src/styles/variables/_variables";
 
-    &__container {
-        padding: 20px;
-    }
+.header {
+    background-color: $darkBackground;
+    height: 4.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     &__title {
-        display: inline-block;
-        margin: 0px;
-        font-weight: normal;
-        color: white;
-        font-size: 1.5rem;
+        display: flex;
+        padding: 0 0 0 $spaceBase;
+        margin: 0;
+        align-items: center;
+        justify-content: flex-start;
 
-        &__logo {
-            margin-right: 20px;
-            width: 124px;
-            border-right: 1px solid white;
-
+        &-logo {
+          display: inline-block;
+          height: $fsL1;
         }
 
-        &--colored {
-            color: #59D2EF;
-            margin-left:5px;
+        &-app-name {
+          display: none;
+
+          @media screen and (min-width: $bpS) {
+            display: inline-block;
+            padding-left: $spaceBase;
+            border-left: solid 2px $reverseTextColor;
+            font-weight: $fwBase;
+            color: $reverseTextColor;
+            font-size: $fsL1;
+
+            &--colored {
+                color: $turquoise;
+            }
+          }
         }
     }
 }

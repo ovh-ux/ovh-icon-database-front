@@ -1,6 +1,13 @@
 <template>
-    <button class="loginButton">
-        Log In
+    <button class="loginButton"
+            type="button">
+      <span class="loginButton__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <circle cx="8" cy="3" r="2.5"/>
+            <path d="M12.5,13a4.5,4.5,0,0,0-9,0v2.5h9Z"/>
+        </svg>
+      </span>
+      <span class="loginButton__label">Log In</span>
     </button>
 </template>
 
@@ -10,17 +17,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.loginButton {
-    float: right;
-    border: none;
-    cursor:pointer;
-    color: white;
-    background-color: transparent;
-    width:110px;
-    height:30px;
-    overflow: hidden;
-    &:hover, &:focus, &:active {
-        font-weight: bold;
-    }
-}
+    @import "./LoginButton.scss";
 </style>
