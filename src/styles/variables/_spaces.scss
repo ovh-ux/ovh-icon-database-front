@@ -1,0 +1,16 @@
+$spaceRatio: 1.414;
+$spaceBase: 1rem;
+
+$spaceS1: $spaceBase / $spaceRatio; //about 11px
+$spaceS2: $spaceS1 / $spaceRatio; //about 8px
+$spaceS3: $spaceS2 / $spaceRatio; //about 5px
+
+$spaceL1: $spaceBase * $spaceRatio; //about 22px
+$spaceL2: $spaceL1 * $spaceRatio; //about 31px
+$spaceL3: $spaceL2 * $spaceRatio; //about 45px
+
+$spaceXL1: $spaceL3 * $spaceRatio; //about 64px
+$spaceXL2: $spaceXL1 * $spaceRatio; //about 90px
+
+
+$touchArea: 3rem;

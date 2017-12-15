@@ -1,0 +1,42 @@
+/* main colors */
+$brandColor: #113f6d;
+$zodiac: #122844;
+$rhino: #273b54;
+$fiord: #3f5167;
+$shuttle: #59697d;
+$regent: #818b99;
+$mischka: #d5dae0;
+$turquoise: #59d2ef;
+$turquoiseLowAlpha: rgba($turquoise, 0.15);
+$foam: #e0f6fd;
+$pacific: #007e9b;
+$concrete: #f2f2f2;
+$nurse: #e9ebe7;
+
+/* alert colors*/
+$infoDark: #3f5167;
+$infoMedium: #7d8da1;
+$infoLight: #b3becc;
+$infoFade: #dfeaf8;
+$successDark: #57710e;
+$successMedium: #b0ca67;
+$successLight: #b0ca67;
+$successFade: #e0eac2;
+$warningDark: #8a5300;
+$warningMedium: #d9ae00;
+$warningLight: #e3cd4d;
+$warningFade: #faefa0;
+$errorDark: #b04020;
+$errorMedium: #e36947;
+$errorLight: #eca490;
+$errorFade: #f5e0da;
+
+/* attribution */
+$textColor: $zodiac;
+$secondaryTextColor: $fiord;
+$reverseTextColor: white;
+$linkColor: $pacific;
+
+$lightBackground: $foam;
+$lightestBackground: white;
+$darkBackground: $brandColor;
