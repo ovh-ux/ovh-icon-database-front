@@ -12,7 +12,17 @@ Then create base theme style:
 body styles , fonts, color variables.
 
 */
+
+@import "src/styles/variables/_variables";
+@import "src/styles/mixins/_font-face";
+
+@include font-face("SourceSansPro", "assets/fonts/sourcesanspro-bold-webfont", 700, normal);
+@include font-face("SourceSansPro", "assets/fonts/sourcesanspro-regular-webfont", normal, normal);
+@include font-face("SourceSansPro", "assets/fonts/sourcesanspro-semibold-webfont", 600, normal);
+
 body {
+    padding: 0;
     margin:0;
-    font-size: 100%;
+    font-family: $fonts;
+    font-size: $fsBase;
 }
