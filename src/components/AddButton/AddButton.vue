@@ -1,7 +1,10 @@
 <template>
-    <div>
-        <a @click=""></a>
-    </div>
+    <li class="addButton">
+        <a @click="addIcon('toto')">
+          <span class="addButton__icon"></span>
+          <span class="addButton__label">Add icon</span>
+        </a>
+    </li>
 </template>
 
 <script>

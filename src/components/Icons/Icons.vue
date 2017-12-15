@@ -1,12 +1,20 @@
 <template>
     <section>
-        <AddButton></AddButton>
-        <div v-for="icon in icons">{{ icon.name }}</div>
+        <ul class="icon-list">
+            <AddButton></AddButton>
+            <Icon
+                v-for="icon in icons"
+                v-bind:key="icon.id"
+                v-bind:icon="icon"
+            ></Icon>
+            </li>
+        </ul>
     </section>
 </template>
 
 <script>
     import AddButton from '@/components/AddButton/AddButton'
+    import Icon from '@/components/Icons/Icon/Icon'
 
     export default {
         name: 'Icons',
@@ -20,17 +28,13 @@
                 return this.$store.state.moduleIcons.icons.length;
             },
             icons() {
-                console.log(this.$store.state.moduleIcons.icons);
                 return this.$store.state.moduleIcons.icons;
             }
         },
         components: {
-            AddButton
+            AddButton,
+            Icon
         }
 
     }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
