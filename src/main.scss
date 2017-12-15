@@ -1,17 +1,4 @@
-//TODO
-/*
-
-include here
-normalize.css OR include sanitize.css
-
-https://necolas.github.io/normalize.css/
-
-https://jonathantneal.github.io/sanitize.css/
-
-Then create base theme style:
-body styles , fonts, color variables.
-
-*/
+@import url(../node_modules/sanitize.css);
 
 @import "src/styles/variables/_variables";
 @import "src/styles/mixins/_font-face";
@@ -22,7 +9,6 @@ body styles , fonts, color variables.
 
 body {
     padding: 0;
-    margin:0;
     font-family: $fonts;
     font-size: $fsBase;
 }
