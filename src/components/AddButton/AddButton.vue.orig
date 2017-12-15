@@ -1,10 +1,19 @@
 <template>
+<<<<<<< HEAD
+    <div>
+        <router-link to="/upload"></router-link>
+            <i></i>
+            Add Icon
+        </a>
+    </div>
+=======
     <li class="addButton">
         <a @click="addIcon('toto')">
           <span class="addButton__icon"></span>
           <span class="addButton__label">Add icon</span>
         </a>
     </li>
+>>>>>>> 8088dcbbee70c411fe16bfc19323031ae708ecb2
 </template>
 
 <script>
@@ -20,3 +29,4 @@
 
 <style lang="scss" scoped>
 </style>
+-
