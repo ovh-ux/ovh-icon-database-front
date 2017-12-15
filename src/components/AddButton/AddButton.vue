@@ -1,5 +1,5 @@
 <template>
-    <li class="addButton">
+    <li class="addButton icon-list__item">
         <router-link to="/upload"></router-link>
           <span class="addButton__icon"></span>
           <span class="addButton__label">Add icon</span>
@@ -19,5 +19,5 @@
 </script>
 
 <style lang="scss" scoped>
+    @import './AddButton.scss';
 </style>
--
