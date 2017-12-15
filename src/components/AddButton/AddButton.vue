@@ -1,6 +1,6 @@
 <template>
     <li class="addButton">
-        <a @click="addIcon('toto')">
+        <router-link to="/upload"></router-link>
           <span class="addButton__icon"></span>
           <span class="addButton__label">Add icon</span>
         </a>
@@ -20,3 +20,4 @@
 
 <style lang="scss" scoped>
 </style>
+-
