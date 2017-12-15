@@ -1,6 +1,9 @@
 <template>
     <div>
-        <a @click=""></a>
+        <router-link to="/upload"></router-link>
+            <i></i>
+            Add Icon
+        </a>
     </div>
 </template>
 
@@ -17,3 +20,4 @@
 
 <style lang="scss" scoped>
 </style>
+-
