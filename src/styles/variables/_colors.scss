@@ -7,7 +7,7 @@ $shuttle: #59697d;
 $regent: #818b99;
 $mischka: #d5dae0;
 $turquoise: #59d2ef;
-$turquoiseLowAlpha: rgba($turquoise, 0.15);
+$turquoiseLowAlpha: fade-out($turquoise, 0.85);
 $foam: #e0f6fd;
 $pacific: #007e9b;
 $concrete: #f2f2f2;
