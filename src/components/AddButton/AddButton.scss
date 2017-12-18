@@ -18,6 +18,11 @@ $borderColor: $linkColor;
     }
   }
 
+  &__link {
+    color: $textColor;
+    text-decoration: none;
+  }
+
   &__icon {
     display: inline-block;
     width: 1.25rem;

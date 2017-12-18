@@ -1,6 +1,7 @@
 <template>
     <li class="addButton icon-list__item">
-        <router-link to="/upload"></router-link>
+        <router-link class="addButton__link"
+          to="/upload">
           <span class="addButton__icon-container">
             <svg xmlns="http://www.w3.org/2000/svg"
                  class="addButton__icon"
@@ -10,7 +11,7 @@
             </svg>
           </span>
           <span class="addButton__label">Add icon</span>
-        </a>
+        </router-link>
     </li>
 </template>
 
