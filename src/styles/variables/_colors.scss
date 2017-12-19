@@ -7,7 +7,7 @@ $shuttle: #59697d;
 $regent: #818b99;
 $mischka: #d5dae0;
 $turquoise: #59d2ef;
-$turquoiseLowAlpha: rgba($turquoise, 0.15);
+$turquoiseLowAlpha: fade-out($turquoise, 0.85);
 $foam: #e0f6fd;
 $pacific: #007e9b;
 $concrete: #f2f2f2;
@@ -32,11 +32,12 @@ $errorLight: #eca490;
 $errorFade: #f5e0da;
 
 /* attribution */
+$brandPrimary: $turquoise;
 $textColor: $zodiac;
 $secondaryTextColor: $fiord;
 $reverseTextColor: white;
 $linkColor: $pacific;
 
-$lightBackground: $foam;
+$lightBackground: $concrete;
 $lightestBackground: white;
 $darkBackground: $brandColor;

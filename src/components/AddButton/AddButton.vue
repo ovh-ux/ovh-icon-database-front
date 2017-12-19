@@ -1,22 +1,24 @@
 <template>
-    <li class="addButton">
-        <a @click="addIcon('toto')">
-          <span class="addButton__icon"></span>
+    <li class="addButton icon-list__item">
+        <router-link class="addButton__link"
+          to="/upload">
+          <span class="addButton__icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="addButton__icon">
+                <use href="./src/assets/icons.svg#plus_20px" />
+            </svg>
+          </span>
           <span class="addButton__label">Add icon</span>
-        </a>
+        </router-link>
     </li>
 </template>
 
 <script>
     export default {
-        name: 'AddButton',
-        methods: {
-            addIcon(icon) {
-                console.log(icon);
-            }
-        }
+        name: 'AddButton'
     };
 </script>
 
 <style lang="scss" scoped>
+    @import './AddButton.scss';
 </style>
