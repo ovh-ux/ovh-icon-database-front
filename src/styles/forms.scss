@@ -1,7 +1,35 @@
+$focusColor: $linkColor;
+
 .input-text {
   box-sizing: border-box;
   padding: $spaceS3 $spaceBase;
   border: solid 1px $lightBorder;
   font-family: inherit;
   border-radius: 3px;
+
+  &:focus,
+  &:active {
+    border-color: $accentedBorder;
+    background-color: $lightPrimaryBackground;
+    box-shadow: inset 1px 2px 0 fade-out($focusColor, 0.85);
+
+    ~.input-text-label {
+      font-weight: $fwMedium;
+      color: $focusColor;
+    }
+  }
+
+  &-row {
+    margin-bottom: $spaceBase;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &-label {
+    @extend .text--small;
+
+    display: inline-block;
+    margin-bottom: $spaceS3;
+    color: $secondaryTextColor;
+  }
 }

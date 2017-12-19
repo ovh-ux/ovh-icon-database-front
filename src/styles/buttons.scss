@@ -6,6 +6,7 @@ button {
   padding: $spaceS2 $spaceBase;
   font-weight: $fwMedium;
   border-radius: 3px;
+  cursor: pointer;
 
   &--primary {
     border: solid 1px $brandPrimary;

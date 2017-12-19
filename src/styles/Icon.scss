@@ -1,5 +1,3 @@
-$selectedBorderColor: $linkColor;
-
 .icon {
     display: inline-block;
     box-sizing: border-box;
@@ -21,7 +19,7 @@ $selectedBorderColor: $linkColor;
 
     &--selected {
       background-color: $lightBackground;
-      border: solid 1px $selectedBorderColor;
+      border: solid 1px $accentedBorder;
     }
 
     &__visual {

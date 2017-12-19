@@ -1,11 +1,9 @@
 @import "src/styles/variables/_variables";
 @import "src/styles/Icon";
 
-$borderColor: $linkColor;
-
 .addButton {
   @extend .icon;
-  border: dashed 1px $borderColor;
+  border: dashed 1px $accentedBorder;
   border-radius: 3px;
 
   &:hover,
