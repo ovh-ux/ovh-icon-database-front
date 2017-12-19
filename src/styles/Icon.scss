@@ -1,4 +1,4 @@
-@import "src/styles/variables/_variables";
+$selectedBorderColor: $linkColor;
 
 .icon {
     display: inline-block;
@@ -16,12 +16,12 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: $concrete;
+      background-color: $lightBackground;
     }
 
     &--selected {
-      background-color: $concrete;
-      border: solid 1px $pacific;
+      background-color: $lightBackground;
+      border: solid 1px $selectedBorderColor;
     }
 
     &__visual {

@@ -15,7 +15,3 @@
         }
     }
 </script>
-
-<style lang="scss" scoped>
-    @import './Icon.scss';
-</style>
