@@ -38,3 +38,7 @@
 
     }
 </script>
+
+<style lang="scss">
+    @import 'src/styles/Icon.scss';
+</style>
