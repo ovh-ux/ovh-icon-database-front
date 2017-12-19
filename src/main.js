@@ -7,6 +7,9 @@ import App from './App'
 import router from './router'
 import store  from './store/index'
 
+const __svg__ = { path: './assets/**/*.svg', name: '[hash].icons.svg' };
+require('webpack-svgstore-plugin/src/helpers/svgxhr')(__svg__);
+
 Vue.use(VueClip);
 
 Vue.config.productionTip = false;
