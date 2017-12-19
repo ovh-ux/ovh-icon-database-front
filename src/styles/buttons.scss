@@ -18,8 +18,9 @@ button {
   }
 
   &--link {
+    @extend .text--link;
+
     border: none;
     background-color: transparent;
-    color: $linkColor;
   }
 }
