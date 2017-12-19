@@ -1,0 +1,17 @@
+.login-form {
+  box-sizing: border-box;
+  max-width: 20rem;
+  padding: 1rem;
+  margin: 0 auto;
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin-bottom: $spaceBase;
+  }
+
+  &__btn {
+    display: block;
+    margin-bottom: $spaceBase;
+  }
+}

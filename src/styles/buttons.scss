@@ -1,0 +1,25 @@
+button {
+  font-family: inherit;
+}
+
+.btn {
+  padding: $spaceS2 $spaceBase;
+  font-weight: $fwMedium;
+  border-radius: 3px;
+
+  &--primary {
+    border: solid 1px $brandPrimary;
+    background-color: $brandPrimary;
+  }
+
+  &--default {
+    border: solid 1px $lightBorder;
+    background-color: transparent;
+  }
+
+  &--link {
+    border: none;
+    background-color: transparent;
+    color: $linkColor;
+  }
+}

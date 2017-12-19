@@ -1,13 +1,22 @@
 <template>
-  <form action="">
-    <label for="username">Username</label>
+  <form action="" class="login-form">
+    <label for="username"
+      class="input-text-label">Username</label>
     <input id="username"
-      type="text">
-    <label for="password">Password</label>
+      name="username"
+      type="text"
+      class="input-text login-form__input">
+    <label for="password"
+      class="input-text-label">Password</label>
     <input id="password"
-      type="text">
-    <button type="submit" name="button">Login</button>
-    <a href="">Forgot your password ?</a>
+      name="password"
+      type="text"
+      class="input-text login-form__input">
+    <button class="btn btn--primary login-form__btn"
+      type="submit"
+      name="button">Login</button>
+    <a href=""
+      class="btn btn--link login-form__btn">Forgot your password ?</a>
   </form>
 </template>
 
@@ -18,4 +27,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import "./LoginForm.scss";
 </style>
