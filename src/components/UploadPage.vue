@@ -1,23 +1,34 @@
 <template>
-  <vue-clip :options="options">
+  <vue-clip :options="options"
+    class="upload">
     <template slot="clip-uploader-action">
-      <div>
+      <div class="upload__area">
         <div class="dz-message">
-          <p>Drop your icons in .svg format in this area
+          <p class="upload__message">Drop your icons in .svg format in this area
             <br>or
           </p>
-          <button type="button" class="btn btn--primary">Upload files</button>
+          <button type="button"
+            class="upload__button btn btn--primary">Upload files</button>
         </div>
       </div>
     </template>
+
     <template slot="clip-uploader-body"
       slot-scope="props">
-      <ul v-for="file in props.files">
-        <li v-if="file.type === 'image/svg+xml'">
-          <img v-bind:src="file.dataUrl" alt="">
-          <span>{{ file.name }}</span>
+      <ul v-for="file in props.files"
+        class="upload__list">
+        <li v-if="file.type === 'image/svg+xml'"
+          class="upload__item">
+          <img v-bind:src="file.dataUrl"
+            alt=""
+            class="upload__item-image">
+          <span class="upload__item-name">{{ file.name }}</span>
         </li>
-        <li v-else>Hmmmm... looks like you're uploading an invalid file : your icons must be in .svg format</li>
+
+        <li v-else
+          class="upload__item">
+          <p>Hmmmm... looks like you're uploading an invalid file : your icons must be in .svg format.</p>
+        </li>
       </ul>
     </template>
   </vue-clip>
@@ -40,6 +51,5 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 </style>
