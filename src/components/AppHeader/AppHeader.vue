@@ -10,7 +10,7 @@
             </span>
           </router-link>
       </h1>
-      <LoginButton></LoginButton>
+      <login-button></login-button>
     </header>
 </template>
 

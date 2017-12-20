@@ -1,7 +1,7 @@
 <template>
     <section>
-        <PageTitle :pagename="'OVH Icon Database'"></PageTitle>
-        <Icons></Icons>
+        <page-title :pagename="'OVH Icon Database'"></page-title>
+        <icons></icons>
     </section>
 </template>
 
