@@ -1,4 +1,17 @@
-#app {
-  text-align: center;
-  margin-top: 60px;
+@import url(../node_modules/sanitize.css);
+
+@import "src/styles/mixins/_font-face";
+
+@include font-face("SourceSansPro", "assets/fonts/sourcesanspro-bold-webfont", 700, normal);
+@include font-face("SourceSansPro", "assets/fonts/sourcesanspro-regular-webfont", normal, normal);
+@include font-face("SourceSansPro", "assets/fonts/sourcesanspro-semibold-webfont", 600, normal);
+
+body {
+    padding: 0;
+    font-family: $fonts;
+    font-size: $fsBase;
+}
+
+button {
+  font-family: inherit;
 }

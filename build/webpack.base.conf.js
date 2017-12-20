@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+var SvgStore = require('webpack-svgstore-plugin');
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -75,8 +76,13 @@ module.exports = {
       },
       {
           test: /\.scss$/,
-          loader: 'sass-loader'
+          loaders: 'sass-loader'
       }
     ]
-  }
+  },
+  plugins: [
+      new SvgStore({
+          prefix:''
+      })
+  ]
 }
