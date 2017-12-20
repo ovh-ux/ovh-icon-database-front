@@ -1,7 +1,7 @@
 .login-form {
   box-sizing: border-box;
   max-width: 20rem;
-  padding: $spaceBase;
+  padding: $spaceBase $spaceBase $spaceL1;
   margin: 0 auto;
 
   &__input {
@@ -20,6 +20,16 @@
       padding-left: 0;
       padding-right: 0;
       margin-top: $spaceBase;
+    }
+  }
+
+  @media screen and (min-width: $bpXS) {
+    border: solid 1px $lightBorder;
+    background-color: $lightBackground;
+    border-radius: 3px;
+
+    &__input {
+      background-color: $lightestBackground;
     }
   }
 }
