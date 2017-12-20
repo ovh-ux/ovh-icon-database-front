@@ -4,7 +4,7 @@
 <script>
 
 export default {
-    name: 'Uploadpage',
+    name: 'UploadPage',
     components: {
     }
 }

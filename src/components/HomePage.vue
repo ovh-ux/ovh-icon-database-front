@@ -1,7 +1,7 @@
 <template>
     <section>
         <h2>OVH Icon Database</h2>
-        <Icons></Icons>
+        <icons></icons>
     </section>
 </template>
 
