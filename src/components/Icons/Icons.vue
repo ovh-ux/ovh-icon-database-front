@@ -1,12 +1,12 @@
 <template>
     <section>
         <ul class="icon-list">
-            <AddButton></AddButton>
-            <Icon
+            <add-button></add-button>
+            <icon
                 v-for="icon in icons"
                 v-bind:key="icon.id"
                 v-bind:icon="icon"
-            ></Icon>
+            ></icon>
             </li>
         </ul>
     </section>
