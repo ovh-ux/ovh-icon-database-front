@@ -1,0 +1,24 @@
+@import "src/styles/font-styles";
+
+.page-title {
+  @extend .title;
+  @extend .title--main;
+
+  display: block;
+  padding: $spaceL3 $spaceBase $spaceXL1;
+  margin: 0;
+  text-align: center;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: $brandPrimary;
+    margin: $spaceL2 auto 0 auto;
+  }
+
+  @media screen and (min-width: $bpS) {
+    padding: $spaceXL1 $spaceBase $spaceXL2;
+  }
+}

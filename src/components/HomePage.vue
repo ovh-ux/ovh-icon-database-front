@@ -1,17 +1,19 @@
 <template>
     <section>
-        <h2>OVH Icon Database</h2>
+        <PageTitle :pagename="'OVH Icon Database'"></PageTitle>
         <Icons></Icons>
     </section>
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle/PageTitle'
 import Icons from '@/components/Icons/Icons'
 
 export default {
     name: 'HomePage',
     components: {
-        Icons
+        Icons,
+        PageTitle
     }
 }
 </script>

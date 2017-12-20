@@ -1,17 +1,19 @@
 <template>
     <section>
-      <h2>Log In</h2>
+      <PageTitle :pagename="'Log In'"></PageTitle>
       <LoginForm></LoginForm>
     </section>
 </template>
 
 <script>
 import LoginForm from '@/components/LoginForm/LoginForm';
+import PageTitle from '@/components/PageTitle/PageTitle';
 
 export default {
     name: 'LoginPage',
     components: {
-        LoginForm
+        LoginForm,
+        PageTitle
     }
 }
 </script>
