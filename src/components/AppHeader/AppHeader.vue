@@ -7,7 +7,7 @@
             <span class="header__title-app-name--colored">{{ title }}</span>
           </span>
       </h1>
-      <LoginButton></LoginButton>
+      <login-button></login-button>
     </header>
 </template>
 
