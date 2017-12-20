@@ -2,15 +2,22 @@
     background-color: $darkBackground;
     height: 4.375rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 
     &__title {
         display: flex;
-        padding: 0 0 0 $spaceBase;
+        align-self: stretch;
+        padding: 0;
         margin: 0;
-        align-items: center;
-        justify-content: flex-start;
+
+        &-link {
+          display: flex;
+          align-self: stretch;
+          padding: 0 0 0 $spaceBase;
+          align-items: center;
+          justify-content: flex-start;
+          text-decoration: none;
+        }
 
         &-logo {
           display: inline-block;
