@@ -11,10 +11,14 @@
       </div>
     </template>
     <template slot="clip-uploader-body"
-      scope="props">
-      <div v-for="file in props.files">
-        {{ file.name }}
-      </div>
+      slot-scope="props">
+      <ul v-for="file in props.files">
+        <li v-if="file.type === 'image/svg+xml'">
+          <img v-bind:src="file.dataUrl" alt="">
+          <span>{{ file.name }}</span>
+        </li>
+        <li v-else>Hmmmm... looks like you're uploading an invalid file : your icons must be in .svg format</li>
+      </ul>
     </template>
   </vue-clip>
 </template>
@@ -28,7 +32,8 @@ export default {
     data: () => {
       return {
         options: {
-          url: '/upload'
+          url: '/upload',
+          acceptedFiles: ['image/svg+xml']
         }
       }
     }
