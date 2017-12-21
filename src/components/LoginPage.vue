@@ -1,7 +1,7 @@
 <template>
     <section>
-      <PageTitle :pagename="'Log In'"></PageTitle>
-      <LoginForm></LoginForm>
+      <page-title :pagename="'Log In'"></page-title>
+      <login-form></login-form>
     </section>
 </template>
 

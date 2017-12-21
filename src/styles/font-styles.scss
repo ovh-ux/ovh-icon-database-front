@@ -1,4 +1,4 @@
-.text {
+%text {
   font-family: $fonts;
   letter-spacing: $lsBase;
   line-height: $lhBase;
@@ -25,7 +25,7 @@
   }
 }
 
-.title {
+%title {
   font-weight: $fwBase;
   line-height: $lhS1;
 

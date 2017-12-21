@@ -11,8 +11,8 @@
 @import "src/styles/buttons";
 
 body {
-    @extend .text;
-    @extend .text--base;
+    @extend %text;
+    @extend %text--base;
 
     padding: 0;
     color: $textColor;

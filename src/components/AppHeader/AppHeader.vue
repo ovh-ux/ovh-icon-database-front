@@ -3,7 +3,10 @@
       <h1 class="header__title">
           <router-link class="header__title-link"
             to="/">
-            <img class="header__title-logo" src="../../assets/logo.svg" alt="OVH group logo">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                    class="header__title-logo">
+                   <use href="#logo" />
+               </svg>
             <span class="header__title-app-name">
               UI Kit
               <span class="header__title-app-name--colored">{{ title }}</span>
@@ -30,7 +33,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
     @import "./AppHeader.scss";
 </style>

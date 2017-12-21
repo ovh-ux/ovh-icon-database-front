@@ -13,6 +13,7 @@ $focusColor: $linkColor;
   &:active {
     border-color: $accentedBorder;
     background-color: $lightPrimaryBackground;
+    outline: none;
     box-shadow: inset 1px 2px 0 fade-out($focusColor, 0.85);
 
     ~.input-text-label {
@@ -28,7 +29,7 @@ $focusColor: $linkColor;
   }
 
   &-label {
-    @extend .text--small;
+    @extend %text--small;
 
     display: inline-block;
     margin-bottom: $spaceS3;

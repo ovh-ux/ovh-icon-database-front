@@ -2,26 +2,28 @@
     background-color: $darkBackground;
     height: 4.375rem;
     display: flex;
+    align-items: stretch;
     justify-content: space-between;
 
     &__title {
         display: flex;
-        align-self: stretch;
         padding: 0;
         margin: 0;
+        align-items: stretch;
+        justify-content: flex-start;
 
         &-link {
           display: flex;
-          align-self: stretch;
           padding: 0 0 0 $spaceBase;
+          text-decoration: none;
           align-items: center;
           justify-content: flex-start;
-          text-decoration: none;
         }
 
         &-logo {
           display: inline-block;
-          height: $fsL1;
+          width: 8.125rem;
+          height: 1.25rem;
         }
 
         &-app-name {
