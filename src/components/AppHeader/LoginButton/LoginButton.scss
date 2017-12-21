@@ -1,11 +1,14 @@
 .loginButton {
+    display: flex;
     align-self: stretch;
     padding: 0 $spaceBase;
     border: none;
     position: relative;
     background-color: fade-out($brandPrimary, 1);
+    align-items: center;
     font-size: $fsBase;
     color: $reverseTextColor;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.16s ease-in;
 

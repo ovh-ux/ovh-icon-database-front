@@ -1,12 +1,12 @@
 <template>
     <section>
-        <h2>OVH Icon Database</h2>
-        <icons v-show="!loading"></icons>
-
+        <page-title :pagename="'OVH Icon Database'"></page-title>
+        <icons></icons>
     </section>
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle/PageTitle'
 import { mapActions } from 'vuex'
 import Icons from '@/components/Icons/Icons'
 
@@ -27,7 +27,8 @@ export default {
         });
     },
     components: {
-        Icons
+        Icons,
+        PageTitle
     }
 }
 </script>
