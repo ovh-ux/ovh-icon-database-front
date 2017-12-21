@@ -27,7 +27,8 @@ export default {
         });
     },
     components: {
-        Icons
+        Icons,
+        PageTitle
     }
 }
 </script>
