@@ -7,7 +7,6 @@
                 v-bind:key="icon.id"
                 v-bind:icon="icon"
             ></icon>
-            </li>
         </ul>
     </section>
 </template>
@@ -18,11 +17,6 @@
 
     export default {
         name: 'Icons',
-        methods: {
-            add(icon) {
-                this.$store.state.moduleIcons.icons.push(icon);
-            }
-        },
         computed: {
             total() {
                 return this.$store.state.moduleIcons.icons.length;
