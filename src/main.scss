@@ -6,12 +6,14 @@
 @include font-face("SourceSansPro", "assets/fonts/sourcesanspro-regular-webfont", normal, normal);
 @include font-face("SourceSansPro", "assets/fonts/sourcesanspro-semibold-webfont", 600, normal);
 
-body {
-    padding: 0;
-    font-family: $fonts;
-    font-size: $fsBase;
-}
+@import "src/styles/font-styles";
+@import "src/styles/forms";
+@import "src/styles/buttons";
 
-button {
-  font-family: inherit;
+body {
+    @extend %text;
+    @extend %text--base;
+
+    padding: 0;
+    color: $textColor;
 }

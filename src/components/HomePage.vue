@@ -1,21 +1,19 @@
 <template>
     <section>
-        <h2>OVH Icon Database</h2>
+        <page-title :pagename="'OVH Icon Database'"></page-title>
         <icons></icons>
     </section>
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle/PageTitle'
 import Icons from '@/components/Icons/Icons'
 
 export default {
     name: 'HomePage',
     components: {
-        Icons
+        Icons,
+        PageTitle
     }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-</style>
