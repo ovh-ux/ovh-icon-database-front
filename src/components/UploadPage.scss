@@ -1,0 +1,21 @@
+.upload {
+  padding: $spaceL3 $spaceS2;
+
+  &__area {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    height: 240px;
+    padding: $spaceBase;
+    border: dashed 1px $linkColor; //to replace when branch feat/loginPage is merged
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    &--file-dragged {
+      background-color: $foam;
+    }
+  }
+}

@@ -1,9 +1,11 @@
 <template>
   <vue-clip :options="options"
     class="upload">
-    <template slot="clip-uploader-action">
-      <div class="upload__area">
-        <div class="dz-message">
+    <template slot="clip-uploader-action"
+      slot-scope="params">
+      <div class="upload__area"
+        v-bind:class="{'upload__area--file-dragged' : params.dragging}">
+        <div class="upload__area-content dz-message">
           <p class="upload__message">Drop your icons in .svg format in this area
             <br>or
           </p>
@@ -52,4 +54,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import "./UploadPage.scss";
 </style>
