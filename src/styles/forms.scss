@@ -13,7 +13,7 @@ $focusColor: $linkColor;
   &:active {
     border-color: $accentedBorder;
     background-color: $lightPrimaryBackground;
-    outline: none;
+    outline: dotted 1px fade-out($textColor, 0.85);
     box-shadow: inset 1px 2px 0 fade-out($focusColor, 0.85);
 
     ~.input-text-label {
