@@ -66,7 +66,8 @@ exports.cssLoaders = function (options) {
             path.resolve(__dirname, '../src/styles/variables/_spaces.scss'),
             path.resolve(__dirname, '../src/styles/variables/_colors.scss'),
             path.resolve(__dirname, '../src/styles/variables/_fonts.scss'),
-            path.resolve(__dirname, '../src/styles/variables/_breakpoints.scss')
+            path.resolve(__dirname, '../src/styles/variables/_breakpoints.scss'),
+            path.resolve(__dirname, '../src/styles/font-styles.scss'),
           ]
         }
       }
