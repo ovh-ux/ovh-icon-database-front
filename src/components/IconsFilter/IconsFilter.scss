@@ -1,0 +1,37 @@
+.icons-filter {
+  padding: $spaceBase $spaceBase $spaceL2 $spaceBase;
+
+  &__content {
+    padding-bottom: $spaceL2;
+    border-bottom: solid 1px $brandPrimary;
+  }
+
+  &__search {
+    display: inline-block;
+    width: 50%;
+    min-width: 12.5rem;
+    max-width: 20rem;
+    position: relative;
+
+    &-field {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      padding-right: 1rem * 3;
+    }
+
+    &-icon {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      fill:none;
+      stroke-linejoin:round;
+      stroke-linecap:round;
+      stroke: $textColor;
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+    }
+  }
+}
