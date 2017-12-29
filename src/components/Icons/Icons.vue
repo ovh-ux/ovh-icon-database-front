@@ -1,14 +1,12 @@
 <template>
-    <section>
-        <ul class="icon-list">
-            <add-button></add-button>
-            <icon
-                v-for="icon in icons"
-                v-bind:key="icon.id"
-                v-bind:icon="icon"
-            ></icon>
-        </ul>
-    </section>
+  <ul class="icon-list">
+      <add-button></add-button>
+      <icon
+          v-for="icon in icons"
+          v-bind:key="icon.id"
+          v-bind:icon="icon"
+      ></icon>
+  </ul>
 </template>
 
 <script>
