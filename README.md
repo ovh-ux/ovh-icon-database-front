@@ -1,6 +1,6 @@
 # Ovh Icon Database Front
 
-![ovh-manager-telecom-banner]()
+![ovh-manager-telecom-banner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
 
 [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)]()
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ovh/ux)
