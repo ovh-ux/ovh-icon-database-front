@@ -9,7 +9,7 @@
     background-color: transparent;
     text-align: center;
     cursor: pointer;
-    transition: all 0.16s ease-out;
+    transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
     &:hover,
     &:focus,
