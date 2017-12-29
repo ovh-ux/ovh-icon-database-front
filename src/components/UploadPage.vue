@@ -27,6 +27,13 @@
               alt="">
           </span>
           <span class="upload__item-name">{{ file.name }}</span>
+          <button type="button"
+            class="btn btn--actions upload__item-actions">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="btn__icon">
+                <use href="#dots__16px" />
+            </svg>
+          </button>
         </li>
 
         <li v-else
