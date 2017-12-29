@@ -2,6 +2,7 @@
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
         <icons></icons>
+        <download-panel></download-panel>
     </section>
 </template>
 
@@ -9,6 +10,7 @@
 import PageTitle from '@/components/PageTitle/PageTitle'
 import { mapActions } from 'vuex'
 import Icons from '@/components/Icons/Icons'
+import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
 
 export default {
     name: 'HomePage',
@@ -28,7 +30,8 @@ export default {
     },
     components: {
         Icons,
-        PageTitle
+        PageTitle,
+        DownloadPanel
     }
 }
 </script>
