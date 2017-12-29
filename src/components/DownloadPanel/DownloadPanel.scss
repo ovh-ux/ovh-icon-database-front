@@ -1,5 +1,10 @@
 .download-panel {
-  padding: $spaceBase;
+  box-sizing: border-box;
+  width: 100%;
+  padding: $spaceBase $spaceBase $spaceL2 $spaceBase;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   background-color: $lightBackground;
 
   &__title {
@@ -22,6 +27,37 @@
       display: block;
       margin-bottom: $spaceS2;
       color: $secondaryTextColor;
+    }
+  }
+
+  &__select {
+    display: block;
+    width: 50%;
+    max-width: 12.5rem;
+  }
+
+  @media screen and (min-width: $bpS) {
+    &__parameters {
+      display: flex;
+    }
+
+    &__parameter {
+      flex-grow: 1;
+      margin-bottom: $spaceBase;
+
+      &:nth-child(3n+1) {
+        padding-right: $spaceBase;
+      }
+
+      &:nth-child(3n+2) {
+        padding: 0 $spaceBase;
+        border-left: solid 1px $mischka;
+        border-right: solid 1px $mischka;
+      }
+
+      &:nth-child(3n) {
+        padding-left: $spaceBase;
+      }
     }
   }
 }
