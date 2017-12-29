@@ -1,5 +1,7 @@
 <template>
-  <form action="" class="login-form">
+  <form action=""
+    method="post"
+    class="login-form">
     <div class="input-text-row">
       <input id="username"
         name="username"
@@ -11,7 +13,7 @@
     <div class="input-text-row">
       <input id="password"
         name="password"
-        type="text"
+        type="password"
         class="input-text login-form__input">
       <label for="password"
         class="input-text-label">Password</label>
