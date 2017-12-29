@@ -6,7 +6,8 @@
       <div class="upload__area"
         v-bind:class="{'upload__area--file-dragged' : params.dragging}">
         <div class="upload__area-content dz-message">
-          <p class="upload__message">Drop your icons in .svg format in this area
+          <p class="upload__message">
+            Drop your icons in .svg format in this area
             <br>or
           </p>
           <button type="button"
@@ -17,13 +18,14 @@
 
     <template slot="clip-uploader-body"
       slot-scope="props">
-      <ul v-for="file in props.files"
-        class="upload__list">
+      <ul class="upload__list">
         <li v-if="file.type === 'image/svg+xml'"
+          v-for="file in props.files"
           class="upload__item">
-          <img v-bind:src="file.dataUrl"
-            alt=""
-            class="upload__item-image">
+          <span class="upload__item-image">
+            <img v-bind:src="file.dataUrl"
+              alt="">
+          </span>
           <span class="upload__item-name">{{ file.name }}</span>
         </li>
 
