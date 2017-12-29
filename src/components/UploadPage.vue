@@ -55,7 +55,9 @@ export default {
       return {
         options: {
           url: '/upload',
-          acceptedFiles: ['image/svg+xml']
+          acceptedFiles: 'image/svg+xml',
+          uploadMultiple: true,
+          parallelUploads: true
         }
       }
     }
