@@ -1,0 +1,27 @@
+.download-panel {
+  padding: $spaceBase;
+  background-color: $lightBackground;
+
+  &__title {
+    @extend %title;
+    @extend %title--second;
+
+    padding: 0;
+    margin: 0 0 $spaceBase 0;
+  }
+
+  &__parameter {
+    padding: 0;
+    border: none;
+    margin: 0 0 $spaceL2 0;
+
+    &-name {
+      @extend %text;
+      @extend %text--small;
+
+      display: block;
+      margin-bottom: $spaceS2;
+      color: $secondaryTextColor;
+    }
+  }
+}

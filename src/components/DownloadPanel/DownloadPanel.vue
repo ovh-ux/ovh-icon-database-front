@@ -7,14 +7,22 @@
       <div class="input-box-row">
         <input type="radio"
           name="color"
-          id="dark-blue">
-        <label for="dark-blue">Dark blue</label>
+          id="dark-blue"
+          class="input-box">
+        <label for="dark-blue"
+          class="input-box-label">
+          Dark blue
+        </label>
       </div>
       <div class="input-box-row">
         <input type="radio"
           name="color"
-          id="white">
-        <label for="white">White</label>
+          id="white"
+          class="input-box">
+        <label for="white"
+          class="input-box-label">
+          White
+        </label>
       </div>
     </fieldset>
 
@@ -39,14 +47,22 @@
       <div class="input-box-row">
         <input type="radio"
           name="file-format"
-          id="svg">
-        <label for="svg">SVG</label>
+          id="svg"
+          class="input-box">
+        <label for="svg"
+          class="input-box-label">
+          SVG
+        </label>
       </div>
       <div class="input-box-row">
         <input type="radio"
           name="file-format"
-          id="png">
-        <label for="png">PNG</label>
+          id="png"
+          class="input-box">
+        <label for="png"
+          class="input-box-label">
+          PNG
+        </label>
       </div>
     </fieldset>
 
