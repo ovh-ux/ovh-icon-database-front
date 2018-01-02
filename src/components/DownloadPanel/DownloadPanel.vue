@@ -8,8 +8,10 @@
         <div class="input-box-row">
           <input type="radio"
             name="color"
+            value="dark-blue"
             id="dark-blue"
-            class="input-box">
+            class="input-box"
+            v-model="color">
           <label for="dark-blue"
             class="input-box-label">
             Dark blue
@@ -18,8 +20,10 @@
         <div class="input-box-row">
           <input type="radio"
             name="color"
+            value="white"
             id="white"
-            class="input-box">
+            class="input-box"
+            v-model="color">
           <label for="white"
             class="input-box-label">
             White
@@ -46,8 +50,10 @@
         <div class="input-box-row">
           <input type="radio"
             name="file-format"
+            value="svg"
             id="svg"
-            class="input-box">
+            class="input-box"
+            v-model="fileFormat">
           <label for="svg"
             class="input-box-label">
             SVG
@@ -56,8 +62,10 @@
         <div class="input-box-row">
           <input type="radio"
             name="file-format"
+            value="png"
             id="png"
-            class="input-box">
+            class="input-box"
+            v-model="fileFormat">
           <label for="png"
             class="input-box-label">
             PNG
@@ -67,7 +75,9 @@
     </div>
 
     <button class="btn btn--primary"
-      type="submit">
+      type="submit"
+      :disabled="!color || !fileFormat"
+      :class="{ 'btn--disabled' : !color || !fileFormat }">
       Generate link
     </button>
   </form>
@@ -75,7 +85,13 @@
 
 <script>
 export default {
-    name: 'DownloadPanel'
+    name: 'DownloadPanel',
+    data: () => {
+      return {
+        color: false,
+        fileFormat: false,
+      }
+    }
 }
 </script>
 
