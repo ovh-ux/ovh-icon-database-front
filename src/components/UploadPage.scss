@@ -54,6 +54,30 @@
       }
     }
 
+    &--in-progress {
+      border-color: fade-out($mischka, .6);
+      box-shadow: none;
+
+      .upload__item {
+        &-image,
+        &-name,
+        &-actions {
+          opacity: .4;
+        }
+
+        &-progress {
+          display: block;
+          height: 3px;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          background: linear-gradient(270deg, $brandPrimary, $accentedBorder, $brandPrimary, $accentedBorder);
+          background-size: 300% 100%;
+          animation: progressAnim 2s ease-out infinite normal;
+        }
+      }
+    }
+
     &-image,
     &-icon {
       display: inline-block;
@@ -73,6 +97,10 @@
 
     &-actions {
       flex-grow: 0;
+    }
+
+    &-progress {
+      display: none;
     }
 
     &-close {
@@ -121,4 +149,9 @@
       }
     }
   }
+}
+
+@keyframes progressAnim {
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
 }

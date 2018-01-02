@@ -21,7 +21,8 @@
       <ul class="upload__list">
         <li v-if="file.type === 'image/svg+xml'"
           v-for="file in props.files"
-          class="upload__item">
+          class="upload__item"
+          :class="{'upload__item--in-progress' :  file.status !== 'error' && file.status !== 'success'}">
           <span class="upload__item-image">
             <img v-bind:src="file.dataUrl"
               alt="">
@@ -34,6 +35,9 @@
                 <use href="#dots__16px" />
             </svg>
           </button>
+          <div class="upload__item-progress"
+            :style="{width: file.progress + '%'}">
+          </div>
         </li>
 
         <li v-else
