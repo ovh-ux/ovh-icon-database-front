@@ -34,10 +34,28 @@
     padding: $spaceBase;
     border: solid 1px $lightBorder;
     margin-bottom: $spaceS2;
+    position: relative;
     align-items: center;
     box-shadow: 1px 1px 2px fade-out($textColor, .85);
 
-    &-image {
+    &--warning {
+      border-color: $warningLight;
+      background-color: $warningFade;
+      box-shadow: 1px 1px 2px fade-out($warningDark, .85);
+
+      .upload__item {
+        &-icon {
+          fill: $warningDark;
+        }
+        &-message {
+          padding-right: $spaceBase * 3;
+          color: $warningDark;
+        }
+      }
+    }
+
+    &-image,
+    &-icon {
       display: inline-block;
       width: 2rem;
       height: 2rem;
@@ -47,12 +65,20 @@
       text-align: center;
     }
 
-    &-name {
+    &-name,
+    &-message {
       flex-grow: 1;
+      margin: 0;
     }
 
     &-actions {
       flex-grow: 0;
+    }
+
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 

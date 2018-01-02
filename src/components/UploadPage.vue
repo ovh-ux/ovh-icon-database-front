@@ -37,8 +37,23 @@
         </li>
 
         <li v-else
-          class="upload__item">
-          <p>Hmmmm... looks like you're uploading an invalid file : your icons must be in .svg format.</p>
+          class="upload__item upload__item--warning">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="upload__item-icon">
+            <use href="#warning_32px"></use>
+          </svg>
+          <p class="upload__item-message">
+            {{ file.name }}
+            <br>
+            This is not a valid file : please upload .svg files.
+          </p>
+          <button type="button"
+            class="btn btn--close upload__item-close">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="btn__icon">
+                <use href="#cross_16px" />
+            </svg>
+          </button>
         </li>
       </ul>
     </template>
