@@ -19,45 +19,72 @@
     <template slot="clip-uploader-body"
       slot-scope="props">
       <ul class="upload__list">
-        <li v-if="file.type === 'image/svg+xml'"
-          v-for="file in props.files"
-          class="upload__item"
-          :class="{'upload__item--in-progress' :  file.status !== 'error' && file.status !== 'success'}">
-          <span class="upload__item-image">
-            <img v-bind:src="file.dataUrl"
-              alt="">
-          </span>
-          <span class="upload__item-name">{{ file.name }}</span>
-          <button type="button"
-            class="btn btn--actions upload__item-actions">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 class="btn__icon">
-                <use href="#dots__16px" />
-            </svg>
-          </button>
-          <div class="upload__item-progress"
-            :style="{width: file.progress + '%'}">
+        <li class="upload__item-container"
+          v-for="file in props.files">
+          <div class="upload__item"
+            v-if="file.type === 'image/svg+xml' && file.status === 'success'">
+            <span class="upload__item-image">
+              <img v-bind:src="file.dataUrl"
+                alt="">
+            </span>
+            <span class="upload__item-name">{{ file.name }}</span>
+            <button type="button"
+              class="btn btn--actions upload__item-actions">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="btn__icon">
+                  <use href="#dots__16px" />
+              </svg>
+            </button>
           </div>
-        </li>
 
-        <li v-else
-          class="upload__item upload__item--warning">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            class="upload__item-icon">
-            <use href="#warning_32px"></use>
-          </svg>
-          <p class="upload__item-message">
-            {{ file.name }}
-            <br>
-            This is not a valid file : please upload .svg files.
-          </p>
-          <button type="button"
-            class="btn btn--close upload__item-close">
+          <div class="upload__item upload__item--in-progress"
+            v-if="file.type === 'image/svg+xml' && file.status !== 'error' && file.status !== 'success'">
+            <span class="upload__item-image"></span>
+            <span class="upload__item-name">{{ file.name }}</span>
+            <div class="upload__item-progress"
+              :style="{width: file.progress + '%'}">
+            </div>
+          </div>
+
+          <div class="upload__item upload__item--warning"
+            v-if="file.type !== 'image/svg+xml'">
             <svg xmlns="http://www.w3.org/2000/svg"
-                 class="btn__icon">
-                <use href="#cross_16px" />
+              class="upload__item-icon">
+              <use href="#warning_32px"></use>
             </svg>
-          </button>
+            <p class="upload__item-message">
+              {{ file.name }}
+              <br>
+              This is not a valid file : please upload .svg files.
+            </p>
+            <button type="button"
+              class="btn btn--close upload__item-close">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="btn__icon">
+                  <use href="#cross_16px" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="upload__item upload__item--error"
+            v-else>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="upload__item-icon">
+              <use href="#cross2_32px"></use>
+            </svg>
+            <p class="upload__item-message">
+              {{ file.name }}
+              <br>
+              Sorry, something went wrong with the upload of this file. Please retry.
+            </p>
+            <button type="button"
+              class="btn btn--close upload__item-close">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="btn__icon">
+                  <use href="#cross_16px" />
+              </svg>
+            </button>
+          </div>
         </li>
       </ul>
     </template>
