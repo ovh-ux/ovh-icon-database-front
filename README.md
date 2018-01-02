@@ -1,27 +1,50 @@
-# ovh-icon-database-front
+# Ovh Icon Database Front
+
+![ovh-manager-telecom-banner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
+
+[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)]()
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ovh/ux)
 
 > front end of ovh-icon-database
 
-## Build Setup
+## Install
 
+### Requirements
+
+* You must have a sane installation of ``nodejs`` (with ``npm``)
+
+### Install dependencies
 ``` bash
-# install dependencies
 npm install
-
-# serve with hot reload at localhost:8080
+```
+### Run in development mode
+``` bash
 npm run dev
+```
+[https://localhost:8080](https://localhost:8080)
 
-# build for production with minification
+And start developing !
+
+### build for production with minification
+``` bash
 npm run build
+```
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
+### run unit tests
+``` bash
 npm run unit
+```
 
-# run all tests
+### run all tests
+``` bash
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Related links
+
+ * Contribute: https://github.com/ovh-ux/ovh-ux-guidelines/blob/master/.github/CONTRIBUTING.md
+ * Report bugs: https://github.com/ovh-ux/ovh-icon-database-front/issues
+
+## License
+
+See https://github.com/ovh-ux/ovh-icon-database-front/blob/master/LICENSE
