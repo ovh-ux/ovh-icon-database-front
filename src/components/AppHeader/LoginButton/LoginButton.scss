@@ -10,7 +10,7 @@
     color: $reverseTextColor;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.16s ease-in;
+    transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
     &::after {
       content: '';
@@ -23,7 +23,7 @@
       left: 0;
       transform-origin: center;
       transform: scaleX(0);
-      transition: all 0.24s cubic-bezier(0.56, 0.20, 0.62, 1.3);
+      transition: all .24s cubic-bezier(0.56, 0.20, 0.62, 1.3);
     }
 
     &:hover,
