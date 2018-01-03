@@ -84,12 +84,22 @@
 </template>
 
 <script>
+import DownloadParameter from '@/components/DownloadPanel/DownloadParameter'
+
 export default {
     name: 'DownloadPanel',
     data: () => {
       return {
         color: false,
         fileFormat: false,
+      }
+    },
+    components: {
+      DownloadParameter
+    },
+    computed: {
+      parameters() {
+        return this.$store.state.downloadParameters.parameters;
       }
     }
 }
