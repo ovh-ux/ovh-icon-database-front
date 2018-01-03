@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 export const moduleIcons = {
     state: {
         icons: []
@@ -5,9 +7,18 @@ export const moduleIcons = {
     mutations: {
         addIcons(state, icons) {
             state.icons = icons;
+        },
+        selectIcon(state, icon) {
+            var currentIconIdx = state.icons.findIndex((elm) => {
+                return elm.id === icon.id;
+            })
+            Vue.set(state.icons[currentIconIdx], 'selected', !state.icons[currentIconIdx].selected);
         }
     },
     actions: {
+        selectIcon({ commit }, icon) {
+            commit('selectIcon', icon);
+        },
         fetchIcons({ commit }) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
