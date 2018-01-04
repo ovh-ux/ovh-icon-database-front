@@ -49,8 +49,6 @@ export const moduleIcons = {
                     icon.url = `${baseUrl}/${icon.name}`;
                 })
                 commit('addIcons', icons);
-            }).catch(error => {
-                console.log(error);
             });
         }
 
