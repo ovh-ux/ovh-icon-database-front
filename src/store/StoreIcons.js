@@ -4,6 +4,14 @@ export const moduleIcons = {
     state: {
         icons: []
     },
+    getters: {
+      selectedIcons: state => {
+        return state.icons.filter(icon => icon.selected)
+      },
+      hasSelectedIcon: state => {
+        return state.icons.filter(icon => icon.selected).length;
+      }
+    },
     mutations: {
         addIcons(state, icons) {
             state.icons = icons;

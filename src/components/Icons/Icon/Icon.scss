@@ -17,6 +17,10 @@
       background-color: $lightBackground;
     }
 
+    &:focus {
+      outline: dotted 1px fade-out($textColor, 0.85);
+    }
+
     &--selected {
       background-color: $lightBackground;
       border: solid 1px $accentedBorder;

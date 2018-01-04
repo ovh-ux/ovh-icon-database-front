@@ -1,63 +1,17 @@
 .download-panel {
+  display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: $spaceBase $spaceBase $spaceL2 $spaceBase;
+  padding: $spaceBase;
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
   background-color: $lightBackground;
-
-  &__title {
-    @extend %title;
-    @extend %title--second;
-
-    padding: 0;
-    margin: 0 0 $spaceBase 0;
-  }
-
-  &__parameter {
-    padding: 0;
-    border: none;
-    margin: 0 0 $spaceL2 0;
-
-    &-name {
-      @extend %text;
-      @extend %text--small;
-
-      display: block;
-      margin-bottom: $spaceS2;
-      color: $secondaryTextColor;
-    }
-  }
-
-  &__select {
-    display: block;
-    width: 50%;
-    max-width: 12.5rem;
-  }
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   @media screen and (min-width: $bpS) {
-    &__parameters {
-      display: flex;
-    }
-
-    &__parameter {
-      flex-grow: 1;
-      margin-bottom: $spaceBase;
-
-      &:nth-child(3n+1) {
-        padding-right: $spaceBase;
-      }
-
-      &:nth-child(3n+2) {
-        padding: 0 $spaceBase;
-        border-left: solid 1px $mischka;
-        border-right: solid 1px $mischka;
-      }
-
-      &:nth-child(3n) {
-        padding-left: $spaceBase;
-      }
-    }
+    max-width: 400px;
   }
 }
