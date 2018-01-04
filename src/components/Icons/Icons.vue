@@ -11,7 +11,7 @@
 
 <script>
 import AddButton from '@/components/AddButton/AddButton'
-import Icon from '@/components/Icons/Icon/Icon'
+import Icon from '@/components/Icon/Icon'
 
 export default {
     name: 'IconsList',
