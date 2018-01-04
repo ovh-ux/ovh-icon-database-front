@@ -31,5 +31,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import './Icons.scss';
+    @import './IconsList.scss';
 </style>

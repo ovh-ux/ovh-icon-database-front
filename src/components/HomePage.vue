@@ -12,7 +12,7 @@ import { mapActions, mapGetters } from 'vuex'
 
 import PageTitle from '@/components/PageTitle/PageTitle'
 import IconsFilter from '@/components/IconsFilter/IconsFilter'
-import Icons from '@/components/Icons/Icons'
+import IconsList from '@/components/IconsList/IconsList'
 import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
 
 export default {
@@ -35,7 +35,7 @@ export default {
         'fetchIcons'
     ]),
     components: {
-      Icons,
+      IconsList,
       PageTitle,
       IconsFilter,
 		  DownloadPanel
