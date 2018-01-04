@@ -10,7 +10,19 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        '/svg/*': {
+            target: 'http://iconlib-api.master.ux.lb.gra-1.containers.ovh.net',
+            changeOrigin: true
+        },
+        '/rawSvg/*': {
+            target: 'https://storage.gra3.cloud.ovh.net/v1/AUTH_46e713e39cc64e4fa462a3fcc4eef012/icon%20library%20test',
+            changeOrigin: true,
+            pathRewrite: {
+                '^/rawSvg':''
+            }
+        }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
