@@ -9,13 +9,17 @@ export const moduleIcons = {
     },
     getters: {
 
-        selectedIcons: state => {
-            state.icons.filter(icon => icon.selected)
-        },
+      selectedIcons: state => {
+        return state.icons.filter(icon => icon.selected)
+      },
 
-        iconsCount: state => {
-            return state.icons.length;
-        }
+      hasSelectedIcon: state => {
+        return state.icons.filter(icon => icon.selected).length;
+      },
+
+      iconsCount: state => {
+        return state.icons.length;
+      }
 
     },
     mutations: {

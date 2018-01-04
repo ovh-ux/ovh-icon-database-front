@@ -1,13 +1,13 @@
 .icon {
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
     width: 7.059em;
     height: 7.059em;
     padding: $spaceS2;
-    vertical-align: middle;
-    list-style-type: none;
+    border: solid 1px transparent;
     background-color: transparent;
     text-align: center;
+    border-radius: 0;
     cursor: pointer;
     transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
@@ -17,15 +17,24 @@
       background-color: $lightBackground;
     }
 
+    &:focus {
+      outline: dotted 1px fade-out($textColor, 0.85);
+    }
+
     &--selected {
       background-color: $lightBackground;
       border: solid 1px $accentedBorder;
     }
 
+    &-container {
+      margin: $spaceS2;
+      flex-grow: 0;
+    }
+
     &__visual {
         width: 2rem;
         height: 2rem;
-        margin: $spaceS2 0;
+        margin: 0 0 $spaceS2 0;
         fill:none;
         stroke-linejoin:round;
         stroke-linecap:round;
@@ -35,14 +44,5 @@
     &__name {
         display: block;
         word-wrap: break-word;
-    }
-
-    &-list {
-        padding: 0;
-        margin: 0 $spaceS2;
-
-        &__item {
-            margin: $spaceS2;
-        }
     }
 }

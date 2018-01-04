@@ -94,22 +94,22 @@
 <script>
 
 export default {
-    name: 'UploadPage',
-    components: {
-    },
-    data: () => {
-      return {
-        options: {
-          url: '/upload',
-          acceptedFiles: 'image/svg+xml',
-          uploadMultiple: true,
-          parallelUploads: true
-        }
+  name: 'UploadPage',
+  components: {
+  },
+  data: () => {
+    return {
+      options: {
+        url: '/upload',
+        acceptedFiles: 'image/svg+xml',
+        uploadMultiple: true,
+        parallelUploads: true
       }
     }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-    @import "./UploadPage.scss";
+  @import "./UploadPage.scss";
 </style>

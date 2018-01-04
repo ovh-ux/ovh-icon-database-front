@@ -4,15 +4,15 @@
 
 <script>
 export default {
-    name: 'PageTitle',
-    props: {
-        pagename: {
-            type: String
-        }
-    }
+  name: 'PageTitle',
+  props: {
+      pagename: {
+          type: String
+      }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-    @import "./PageTitle.scss";
+  @import "./PageTitle.scss";
 </style>

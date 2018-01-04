@@ -1,10 +1,15 @@
-@import "src/styles/variables/_variables";
-@import "src/styles/Icon";
-
 .addButton {
-  @extend .icon;
+  box-sizing: border-box;
+  width: 7.059em;
+  height: 7.059em;
+  padding: $spaceS2;
+  flex-grow: 0;
   border: dashed 1px $accentedBorder;
+  margin: $spaceS2;
+  text-align: center;
   border-radius: 3px;
+  cursor: pointer;
+  transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
   &:hover,
   &:focus,

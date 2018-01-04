@@ -21,9 +21,9 @@
 export default {
     name: 'IconsFilter',
     data: () => {
-        return {
-            search: ''
-        }
+      return {
+        search: ''
+      }
     }
 }
 </script>
