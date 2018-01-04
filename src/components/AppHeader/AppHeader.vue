@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import LoginButton from '@/components/AppHeader/LoginButton/LoginButton';
+import LoginButton from '@/components/Login/LoginButton/LoginButton';
 
 export default {
     name: 'AppHeader',
