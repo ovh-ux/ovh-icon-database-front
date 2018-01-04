@@ -19,11 +19,13 @@ button {
     background-color: $brandPrimary;
     transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: mix($brandPrimary, $linkColor, 60%);
-      border-color: fade-out($textColor, .6);
+    &:not(.btn--disabled) {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: mix($brandPrimary, $linkColor, 60%);
+        border-color: fade-out($textColor, .6);
+      }
     }
   }
 
@@ -33,11 +35,13 @@ button {
     background-color: transparent;
     transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
-    &:hover,
-    &:active,
-    &:focus {
-      border-color: fade-out($accentedBorder, .6);
-      background-color: fade-out($brandPrimary, 0.85);
+    &:not(.btn--disabled) {
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: fade-out($accentedBorder, .6);
+        background-color: fade-out($brandPrimary, 0.85);
+      }
     }
   }
 
@@ -68,6 +72,10 @@ button {
     .btn__icon {
       stroke: $secondaryTextColor;
     }
+  }
+
+  &--disabled {
+    opacity: .4;
   }
 
   &__icon {

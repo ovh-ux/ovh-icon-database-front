@@ -1,0 +1,17 @@
+.download-panel {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: $spaceBase;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: $lightBackground;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: $bpS) {
+    max-width: 400px;
+  }
+}

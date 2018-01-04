@@ -19,7 +19,12 @@
 
 <script>
 export default {
-    name: 'IconsFilter'
+    name: 'IconsFilter',
+    data: () => {
+      return {
+        search: ''
+      }
+    }
 }
 </script>
 
