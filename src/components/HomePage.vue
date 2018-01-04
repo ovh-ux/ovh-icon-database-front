@@ -2,8 +2,8 @@
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
         <icons-filter></icons-filter>
-        <icons></icons>
-        <download-panel></download-panel>
+        <icons-list></icons-list>
+        <!--<download-panel></download-panel>-->
     </section>
 </template>
 
@@ -11,7 +11,7 @@
 import PageTitle from '@/components/PageTitle/PageTitle'
 import IconsFilter from '@/components/IconsFilter/IconsFilter'
 import { mapActions } from 'vuex'
-import Icons from '@/components/Icons/Icons'
+import IconsList from '@/components/Icons/IconsList'
 import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
 
 export default {
@@ -31,9 +31,9 @@ export default {
         });
     },
     components: {
-        Icons,
+        IconsList,
         PageTitle,
-	IconsFilter,
+        IconsFilter,
         DownloadPanel
     }
 }
