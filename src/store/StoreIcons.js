@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios'
 
-const baseUrl = process.env.OSS_URL;
+const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`;
 
 export const moduleIcons = {
     state: {
