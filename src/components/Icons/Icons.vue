@@ -3,9 +3,10 @@
         <ul class="icon-list">
             <add-button></add-button>
             <icon
-                v-for="icon in icons"
+                v-for="(icon, index) in icons"
                 v-bind:key="icon.id"
                 v-bind:icon="icon"
+                v-bind:index="index"
             ></icon>
         </ul>
     </section>

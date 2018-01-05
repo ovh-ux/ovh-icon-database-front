@@ -2,8 +2,10 @@
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
         <icons-filter></icons-filter>
-        <icons v-if="!loading"></icons>
-        <icons-loading v-else></icons-loading>
+        <transition name="icon-loading" mode="out-in">
+          <icons-loading v-if="loading"></icons-loading>
+          <icons v-else></icons>
+        </transition>
     </section>
 </template>
 
@@ -39,3 +41,27 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.icon {
+  &-loading {
+    &-enter,
+    &-leave-to {
+      opacity: 0;
+    }
+
+    &-enter-active {
+      transition: opacity .2s ease-out;
+    }
+
+    &-enter-to,
+    &-leave {
+      opacity: 1;
+    }
+
+    &-leave-active {
+      transition: opacity .2s ease-in;
+    }
+  }
+}
+</style>
