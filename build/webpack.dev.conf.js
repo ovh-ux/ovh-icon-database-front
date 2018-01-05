@@ -12,7 +12,8 @@ const portfinder = require('portfinder')
 var envVar = [
   'OSS_URL',
   'OSS_AUTH',
-  'OSS_CONTAINER'
+  'OSS_CONTAINER',
+  'API_URL'
 ];
 envVar.forEach(varName => {
   if (!process.env[varName]) {
