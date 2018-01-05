@@ -4,9 +4,7 @@
            class="icon"
            @click="selectIcon(icon)"
            v-bind:class="{ 'icon--selected': icon.selected }">
-           <svg xmlns="http://www.w3.org/2000/svg"
-             class="icon__visual"
-             v-html="icon.svg"></svg>
+           <img class="icon__visual" :src="icon.url" :alt="icon.name" />
            <span class="icon__name">{{icon.name}}</span>
         </button>
     </li>

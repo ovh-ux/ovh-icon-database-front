@@ -10,7 +10,19 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        '/svg/*': {
+            target: `${process.env.API_URL}`,
+            changeOrigin: true
+        },
+        '/rawSvg/*': {
+            target: `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`,
+            changeOrigin: true,
+            pathRewrite: {
+                '^/rawSvg':''
+            }
+        }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

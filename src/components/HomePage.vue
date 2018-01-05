@@ -1,8 +1,8 @@
 <template>
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
-        <icons-filter></icons-filter>
-        <icons-list></icons-list>
+        <icon-filter></icon-filter>
+        <icon-list></icon-list>
         <download-panel v-if="hasSelectedIcon"></download-panel>
     </section>
 </template>
@@ -11,20 +11,20 @@
 import { mapActions, mapGetters } from 'vuex'
 
 import PageTitle from '@/components/PageTitle/PageTitle'
-import IconsFilter from '@/components/IconsFilter/IconsFilter'
-import IconsList from '@/components/Icons/IconsList'
+import IconFilter from '@/components/Icon/IconFilter/IconFilter'
+import IconList from '@/components/Icon/IconList/IconList'
 import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
 
 export default {
     name: 'HomePage',
     data: () => {
         return {
-            loading: true,
+            loading: true
         };
     },
     created: function () {
         this.loading = true;
-        this.fetchIcons().finally(() => {
+        this.fetchIcons().then(() => {
             this.loading = false;
         });
     },
@@ -35,10 +35,10 @@ export default {
         'fetchIcons'
     ]),
     components: {
-        IconsList,
-        PageTitle,
-        IconsFilter,
-        DownloadPanel
+      IconList,
+      PageTitle,
+      IconFilter,
+		  DownloadPanel
     }
 }
 </script>

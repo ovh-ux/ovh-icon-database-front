@@ -11,10 +11,10 @@
 
 <script>
 import AddButton from '@/components/AddButton/AddButton'
-import Icon from '@/components/Icons/Icon/Icon'
+import Icon from '@/components/Icon/Icon'
 
 export default {
-    name: 'IconsList',
+    name: 'IconList',
     computed: {
         total() {
             return this.$store.state.moduleIcons.icons.length;
@@ -31,5 +31,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import './IconsList.scss';
+    @import './IconList.scss';
 </style>

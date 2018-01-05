@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import VueClip from 'vue-clip'
 import HomePage from '@/components/HomePage'
 import UploadPage from '@/components/UploadPage'
-import LoginPage from '@/components/LoginPage'
+import LoginPage from '@/components/Login/Login'
 
 Vue.use(Router)
 Vue.use(VueClip)
@@ -17,12 +17,12 @@ export default new Router({
     },
     {
         path: '/upload',
-        name:'Upload',
+        name:'UploadPage',
         component: UploadPage
     },
     {
         path: '/login',
-        name:'Login',
+        name:'LoginPage',
         component: LoginPage
     }
   ]
