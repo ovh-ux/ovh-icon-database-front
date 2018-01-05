@@ -1,5 +1,5 @@
 <template>
-    <li class="addButton icon-list__item">
+    <li class="addButton">
         <router-link class="addButton__link"
           to="/upload">
           <span class="addButton__icon-container">

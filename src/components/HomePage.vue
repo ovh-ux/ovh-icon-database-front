@@ -1,21 +1,23 @@
 <template>
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
-        <icons-filter></icons-filter>
+        <icon-filter></icon-filter>
         <transition name="icon-loading" mode="out-in">
-          <icons-loading v-if="loading"></icons-loading>
-          <icons v-else></icons>
+          <icon-loading v-if="loading"></icon-loading>
+          <icon-list v-else></icon-list>
         </transition>
+        <download-panel v-if="hasSelectedIcon"></download-panel>
     </section>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 import PageTitle from '@/components/PageTitle/PageTitle'
-import IconsFilter from '@/components/IconsFilter/IconsFilter'
-import Icons from '@/components/Icons/Icons'
-import IconsLoading from '@/components/Icons/IconsLoading/IconsLoading'
+import IconFilter from '@/components/Icon/IconFilter/IconFilter'
+import IconLoading from '@/components/Icon/IconLoading/IconLoading'
+import IconList from '@/components/Icon/IconList/IconList'
+import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
 
 export default {
     name: 'HomePage',
@@ -24,20 +26,24 @@ export default {
             loading: true
         };
     },
-    methods: mapActions([
-        'fetchIcons'
-    ]),
     created: function () {
         this.loading = true;
-        this.fetchIcons().finally(() => {
+        this.fetchIcons().then(() => {
             this.loading = false;
         });
     },
+    computed: mapGetters([
+      'hasSelectedIcon'
+    ]),
+    methods: mapActions([
+        'fetchIcons'
+    ]),
     components: {
-        Icons,
-        PageTitle,
-        IconsFilter,
-        IconsLoading
+      PageTitle,
+      IconFilter,
+      IconLoading,
+      IconList,
+      DownloadPanel
     }
 }
 </script>

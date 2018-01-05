@@ -19,10 +19,15 @@
 
 <script>
 export default {
-    name: 'IconsFilter'
+    name: 'IconFilter',
+    data: () => {
+      return {
+        search: ''
+      }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-    @import "./IconsFilter.scss";
+    @import "./IconFilter.scss";
 </style>

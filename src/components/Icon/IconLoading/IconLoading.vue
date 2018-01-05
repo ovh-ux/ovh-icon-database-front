@@ -17,10 +17,10 @@
 
 <script>
 export default {
-    name: 'IconsLoading'
+    name: 'IconLoading'
 }
 </script>
 
 <style lang="scss" scoped>
-@import "./IconsLoading.scss";
+@import "./IconLoading.scss";
 </style>
