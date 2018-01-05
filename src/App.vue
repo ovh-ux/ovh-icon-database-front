@@ -7,7 +7,6 @@
 
 <script>
 import AppHeader from '@/components/AppHeader/AppHeader'
-
 export default {
     name: 'app',
     components: {

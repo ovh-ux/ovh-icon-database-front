@@ -12,11 +12,11 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/svg/*': {
-            target: 'http://iconlib-api.master.ux.lb.gra-1.containers.ovh.net',
+            target: `${process.env.OSS_URL}`,
             changeOrigin: true
         },
         '/rawSvg/*': {
-            target: 'https://storage.gra3.cloud.ovh.net/v1/AUTH_46e713e39cc64e4fa462a3fcc4eef012/icon%20library%20test',
+            target: `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`,
             changeOrigin: true,
             pathRewrite: {
                 '^/rawSvg':''

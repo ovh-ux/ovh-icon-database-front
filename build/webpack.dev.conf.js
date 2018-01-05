@@ -1,5 +1,6 @@
 'use strict'
 const utils = require('./utils')
+const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
@@ -7,6 +8,17 @@ const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+
+var envVar = [
+  'OSS_URL',
+  'OSS_AUTH',
+  'OSS_CONTAINER'
+];
+envVar.forEach(varName => {
+  if (!process.env[varName]) {
+    console.log(chalk.red.bold(`>>> Env var ${varName} is missing !`));
+  }
+})
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {

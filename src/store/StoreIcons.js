@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios'
 
-const baseUrl = "https://storage.gra3.cloud.ovh.net/v1/AUTH_46e713e39cc64e4fa462a3fcc4eef012/icon%20library%20test";
+const baseUrl = process.env.OSS_URL;
 
 export const moduleIcons = {
     state: {
