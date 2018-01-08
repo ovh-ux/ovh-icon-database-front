@@ -1,9 +1,10 @@
 <template>
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
-        <icon-filter></icon-filter>
+        <!--<icon-filter></icon-filter>
         <icon-list></icon-list>
-        <download-panel v-if="hasSelectedIcon"></download-panel>
+        <download-panel v-if="hasSelectedIcon"></download-panel>-->
+        <icon-error></icon-error>
     </section>
 </template>
 
@@ -14,6 +15,7 @@ import PageTitle from '@/components/PageTitle/PageTitle'
 import IconFilter from '@/components/Icon/IconFilter/IconFilter'
 import IconList from '@/components/Icon/IconList/IconList'
 import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
+import IconError from '@/components/Icon/IconError/IconError'
 
 export default {
     name: 'HomePage',
@@ -38,7 +40,8 @@ export default {
       IconList,
       PageTitle,
       IconFilter,
-		  DownloadPanel
+		  DownloadPanel,
+      IconError
     }
 }
 </script>
