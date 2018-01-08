@@ -1,0 +1,12 @@
+@mixin icons-loading-delay($item-number, $base-delay: .15s, $added-delay: .1s) {
+  &:nth-child(#{$item-number}) {
+    animation-delay: $base-delay + $added-delay * ($item-number - 2);
+
+    .icons-loading__placeholder {
+      &-visual,
+      &-name {
+        animation-delay: $base-delay;
+      }
+    }
+  }
+}

@@ -14,5 +14,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./IconLoading.scss";
+  @import "./IconLoading.scss";
 </style>
