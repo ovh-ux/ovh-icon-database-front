@@ -1,0 +1,72 @@
+.icon-error {
+  margin: 0 $spaceS2;
+
+  &__illustration {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 7.059em;
+    height: 7.059em;
+    padding: $spaceS2;
+    border: solid 1px $errorLight;
+    background-color: $errorFade;
+
+    &:first-child,
+    &:last-child {
+      display: none;
+    }
+
+    &-row {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+  }
+
+  &__visual {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: $spaceS2 auto $spaceBase auto;
+    fill: none;
+    stroke: $errorDark;
+  }
+
+  &__placeholder-name {
+    display: block;
+    width: 75%;
+    height: .8rem;
+    margin: 0 auto;
+    background: linear-gradient(45deg, $errorMedium, $errorLight);
+  }
+
+  &__text {
+    @extend %title;
+    @extend %title--minor;
+
+    padding: 0 $spaceS2;
+    margin: $spaceL3 0;
+    text-align: center;
+    color: $secondaryTextColor;
+  }
+
+  @media screen and (min-width: $bpXS) {
+    &__illustration {
+      &:first-child,
+      &:last-child {
+        display: inline-block;
+        position: relative;
+        background-color: $lightestBackground;
+        z-index: -1;
+        opacity: .4;
+      }
+
+      &:first-child {
+        transform: scale(.8) translateX(32%);
+      }
+
+      &:last-child {
+        transform: scale(.8) translateX(-32%);
+      }
+    }
+  }
+}
