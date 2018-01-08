@@ -49,25 +49,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.icon {
-  &-loading {
-    &-enter,
-    &-leave-to {
-      opacity: 0;
-    }
-
-    &-enter-active {
-      transition: opacity .2s ease-out;
-    }
-
-    &-enter-to,
-    &-leave {
-      opacity: 1;
-    }
-
-    &-leave-active {
-      transition: opacity .2s ease-in;
-    }
-  }
-}
+    @import './HomePage.scss';
 </style>

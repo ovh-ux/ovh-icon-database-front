@@ -46,3 +46,29 @@
         word-wrap: break-word;
     }
 }
+
+
+//appear animation
+
+.v {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  &-enter-active {
+    --delay: calc(var(--idx) * .1s + .1s);
+    transition: transform .4s ease-out var(--delay), opacity .75s ease-out var(--delay);
+  }
+
+  &-enter-to,
+  &-leave {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &-leave-active {
+    transition: opacity .4s ease-in, transform 0s ease-in .4s;
+  }
+}
