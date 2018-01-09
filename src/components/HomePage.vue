@@ -1,10 +1,12 @@
 <template>
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
-        <!--<icon-filter></icon-filter>
-        <icon-list></icon-list>
-        <download-panel v-if="hasSelectedIcon"></download-panel>-->
-        <icon-error></icon-error>
+        <icon-error v-if="error"></icon-error>
+        <div v-else>
+          <icon-filter></icon-filter>
+          <icon-list></icon-list>
+          <download-panel v-if="hasSelectedIcon"></download-panel>
+        </div>
     </section>
 </template>
 
@@ -21,7 +23,8 @@ export default {
     name: 'HomePage',
     data: () => {
         return {
-            loading: true
+            loading: true,
+            error: false
         };
     },
     created: function () {
