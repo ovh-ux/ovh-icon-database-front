@@ -2,10 +2,11 @@
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
         <icon-filter></icon-filter>
-        <transition name="icon-loading" mode="out-in">
+        <!--<transition name="icon-loading" mode="out-in">
           <icon-loading v-if="loading"></icon-loading>
           <icon-list v-else></icon-list>
-        </transition>
+        </transition>-->
+        <icon-loading></icon-loading>
         <download-panel v-if="hasSelectedIcon"></download-panel>
     </section>
 </template>

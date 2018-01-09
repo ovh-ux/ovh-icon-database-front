@@ -1,7 +1,7 @@
 .addButton {
   box-sizing: border-box;
-  width: 7.059em;
-  height: 7.059em;
+  width: $sizeIconBlock;
+  height: $sizeIconBlock;
   padding: $spaceS2;
   flex-grow: 0;
   border: dashed 1px $accentedBorder;
@@ -28,8 +28,8 @@
 
   &__icon {
     display: inline-block;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: $sizeIconS1;
+    height: $sizeIconS1;
     fill: none;
     stroke: $textColor;
     position: absolute;

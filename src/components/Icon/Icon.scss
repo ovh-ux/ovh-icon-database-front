@@ -1,8 +1,8 @@
 .icon {
     display: block;
     box-sizing: border-box;
-    width: 7.059em;
-    height: 7.059em;
+    width: 7.059rem;
+    height: 7.059rem;
     padding: $spaceS2;
     border: solid 1px transparent;
     background-color: transparent;
@@ -32,8 +32,8 @@
     }
 
     &__visual {
-        width: 2rem;
-        height: 2rem;
+        width: $sizeIconBase;
+        height: $sizeIconBase;
         margin: 0 0 $spaceS2 0;
         fill:none;
         stroke-linejoin:round;
