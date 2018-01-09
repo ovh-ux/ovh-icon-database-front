@@ -1,0 +1,88 @@
+@import "src/styles/mixins/_icons-loading-delay";
+
+.icons-loading {
+  padding: 0;
+  margin: 0 $spaceS2;
+  list-style-type: none;
+
+  &__item {
+    display: inline-block;
+    box-sizing: border-box;
+    width: $sizeIconBlock;
+    height: $sizeIconBlock;
+    padding: $spaceS2;
+    border: solid 1px $brandPrimary;
+    margin: $spaceS2;
+    vertical-align: middle;
+    background-color: transparent;
+    text-align: center;
+    animation: iconsLoadingItems .7s ease-in infinite alternate both;
+
+    @include icons-loading-delay(2);
+    @include icons-loading-delay(3);
+  }
+
+  &__placeholder {
+    &-visual {
+      display: block;
+      width: $sizeIconBase;
+      height: $sizeIconBase;
+      border: solid 1px $accentedBorder;
+      margin: $spaceS2 auto $spaceBase auto;
+      background-color: $lightPrimaryBackground;
+      border-radius: 50%;
+      opacity: .4;
+      animation: iconsLoadingPlaceholderVisual .7s ease-out infinite alternate both;
+    }
+
+    &-name {
+      display: block;
+      width: 75%;
+      height: .8rem;
+      margin: 0 auto;
+      background: linear-gradient(270deg, $brandPrimary, $accentedBorder, $brandPrimary, $accentedBorder);
+      background-size: 300% 100%;
+      opacity: .4;
+      animation: iconsLoadingPlaceholderName 2.1s ease-out infinite reverse;
+    }
+  }
+}
+
+@keyframes iconsLoadingItems {
+  0% {
+    opacity: 0;
+    transform: scale(.85);
+  }
+  5% {
+    opacity: 0;
+  }
+  40% {
+    transform: scale(.85);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes iconsLoadingPlaceholderVisual {
+  0% {
+    transform: scale(.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes iconsLoadingPlaceholderName {
+  0% {
+    background-position:0% 50%;
+  }
+  100% {
+    background-position:100% 50%;
+  }
+}

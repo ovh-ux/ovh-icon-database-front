@@ -1,4 +1,5 @@
 <template>
+  <transition appear>
     <li class="addButton">
         <router-link class="addButton__link"
           to="/upload">
@@ -11,6 +12,7 @@
           <span class="addButton__label">Add icon</span>
         </router-link>
     </li>
+  </transition>
 </template>
 
 <script>

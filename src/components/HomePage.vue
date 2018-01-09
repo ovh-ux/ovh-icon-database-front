@@ -1,11 +1,14 @@
 <template>
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
-        <icon-error v-if="error"></icon-error>
+	<icon-error v-if="error"></icon-error>
         <div v-else>
-          <icon-filter></icon-filter>
-          <icon-list></icon-list>
-          <download-panel v-if="hasSelectedIcon"></download-panel>
+		<icon-filter></icon-filter>
+		<transition name="icon-loading" mode="out-in">
+		  <icon-loading v-if="loading"></icon-loading>
+		  <icon-list v-else></icon-list>
+		</transition>
+		<download-panel v-if="hasSelectedIcon"></download-panel>
         </div>
     </section>
 </template>
@@ -15,6 +18,7 @@ import { mapActions, mapGetters } from 'vuex'
 
 import PageTitle from '@/components/PageTitle/PageTitle'
 import IconFilter from '@/components/Icon/IconFilter/IconFilter'
+import IconLoading from '@/components/Icon/IconLoading/IconLoading'
 import IconList from '@/components/Icon/IconList/IconList'
 import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
 import IconError from '@/components/Icon/IconError/IconError'
@@ -40,11 +44,15 @@ export default {
         'fetchIcons'
     ]),
     components: {
-      IconList,
       PageTitle,
       IconFilter,
-		  DownloadPanel,
-      IconError
+      IconLoading,
+      IconList,
+      DownloadPanel
     }
 }
 </script>
+
+<style lang="scss" scoped>
+    @import './HomePage.scss';
+</style>
