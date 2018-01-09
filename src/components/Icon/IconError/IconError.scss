@@ -4,8 +4,8 @@
   &__illustration {
     display: inline-block;
     box-sizing: border-box;
-    width: 7.059em;
-    height: 7.059em;
+    width: $sizeIconBlock;
+    height: $sizeIconBlock;
     padding: $spaceS2;
     border: solid 1px $errorLight;
     background-color: $errorFade;
@@ -24,8 +24,8 @@
 
   &__visual {
     display: block;
-    width: 2rem;
-    height: 2rem;
+    width: $sizeIconBase;
+    height: $sizeIconBase;
     margin: $spaceS2 auto $spaceBase auto;
     fill: none;
     stroke: $errorDark;
