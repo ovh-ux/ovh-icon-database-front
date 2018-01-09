@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import axios from 'axios'
+
+import { api } from '../utils/request';
 
 const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`;
 
@@ -10,7 +11,7 @@ export const moduleIcons = {
     getters: {
 
       selectedIcons: state => {
-        return state.icons.filter(icon => icon.selected)
+        return state.icons.filter(icon => icon.selected);
       },
 
       hasSelectedIcon: state => {
@@ -31,8 +32,12 @@ export const moduleIcons = {
         selectIcon(state, icon) {
             var currentIconIdx = state.icons.findIndex((elm) => {
                 return elm.id === icon.id;
-            })
-            Vue.set(state.icons[currentIconIdx], 'selected', !state.icons[currentIconIdx].selected);
+            });
+
+            Vue.set(
+              state.icons[currentIconIdx], 'selected',
+              !state.icons[currentIconIdx].selected
+            );
         }
 
     },
@@ -43,7 +48,7 @@ export const moduleIcons = {
         },
 
         fetchIcons({ commit }) {
-            return axios.get('/svg/list').then(response => {
+            return api.get('/svg/list').then(response => {
                 let icons = response.data.data;
                 icons.forEach(icon => {
                     icon.url = `${baseUrl}/${icon.name}`;
