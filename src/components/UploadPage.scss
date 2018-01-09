@@ -104,8 +104,8 @@
     &-image,
     &-icon {
       display: inline-block;
-      width: 2rem;
-      height: 2rem;
+      width: $sizeIconBase;
+      height: $sizeIconBase;
       flex-grow: 0;
       vertical-align: middle;
       text-align: center;

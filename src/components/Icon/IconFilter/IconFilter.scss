@@ -17,20 +17,20 @@
       display: block;
       box-sizing: border-box;
       width: 100%;
-      padding-right: 1rem * 3;
+      padding-right: $sizeIconS2 + $spaceBase * 2;
     }
 
     &-icon {
       display: block;
-      width: 1rem;
-      height: 1rem;
+      width: $sizeIconS2;
+      height: $sizeIconS2;
       fill:none;
       stroke-linejoin:round;
       stroke-linecap:round;
       stroke: $textColor;
       position: absolute;
       top: 50%;
-      right: 1rem;
+      right: $spaceBase;
       transform: translateY(-50%);
     }
   }

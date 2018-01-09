@@ -1,7 +1,7 @@
 .addButton {
   box-sizing: border-box;
-  width: 7.059em;
-  height: 7.059em;
+  width: $sizeIconBlock;
+  height: $sizeIconBlock;
   padding: $spaceS2;
   flex-grow: 0;
   border: dashed 1px $accentedBorder;
@@ -28,8 +28,8 @@
 
   &__icon {
     display: inline-block;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: $sizeIconS1;
+    height: $sizeIconS1;
     fill: none;
     stroke: $textColor;
     position: absolute;
@@ -47,5 +47,30 @@
       border-radius: 50%;
       transition: all .16s cubic-bezier(.69,.19,.71,.87);
     }
+  }
+}
+
+
+//appear animation
+
+.v {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  &-enter-active {
+    transition: transform .4s ease-out, opacity .75s ease-out;
+  }
+
+  &-enter-to,
+  &-leave {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &-leave-active {
+    transition: opacity .4s ease-in, transform 0s ease-in .4s;
   }
 }
