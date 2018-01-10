@@ -28,7 +28,7 @@ export const moduleIcons = {
       },
 
       filteredIcons: state => {
-        return state.icons.filter(icon => icon.name.match(new RegExp(state.searchName, "i")));
+        return state.icons.filter(icon => icon.name.match(new RegExp(state.searchName, 'i')));
       }
 
     },
@@ -69,6 +69,7 @@ export const moduleIcons = {
                 let icons = response.data.data;
                 icons.forEach(icon => {
                     icon.url = `${baseUrl}/${icon.name}`;
+                    icon.name = icon.name.replace('.svg','');
                 })
                 commit('addIcons', icons);
             });
