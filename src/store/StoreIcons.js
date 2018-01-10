@@ -4,7 +4,8 @@ import { api } from '../utils/request';
 
 const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`;
 
-console.log(process.env);
+console.log("===>", process.env);
+alert(JSON.stringify(process.env))
 
 export const moduleIcons = {
     state: {

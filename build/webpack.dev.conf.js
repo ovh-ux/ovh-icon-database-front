@@ -9,18 +9,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-var envVar = [
-  'OSS_URL',
-  'OSS_AUTH',
-  'OSS_CONTAINER',
-  'API_URL'
-];
-envVar.forEach(varName => {
-  if (!process.env[varName]) {
-    console.log(chalk.red.bold(`>>> Env var ${varName} is missing !`));
-  }
-})
-
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
