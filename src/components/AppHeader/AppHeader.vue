@@ -4,9 +4,10 @@
           <router-link class="header__title-link"
             to="/">
             <svg xmlns="http://www.w3.org/2000/svg"
-                    class="header__title-logo">
-                   <use href="#logo" />
-               </svg>
+              class="header__title-logo">
+              <title>OVH logo</title>
+              <use href="#logo" />
+            </svg>
             <span class="header__title-app-name">
               UI Kit
               <span class="header__title-app-name--colored">{{ title }}</span>

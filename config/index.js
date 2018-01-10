@@ -12,9 +12,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/svg/*': {
+        '/api/*': {
             target: `${process.env.API_URL}`,
-            changeOrigin: true
+            changeOrigin: true,
+            pathRewrite: {
+              '^/api': ''
+            }
         },
         '/rawSvg/*': {
             target: `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`,

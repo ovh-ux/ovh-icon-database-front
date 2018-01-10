@@ -65,7 +65,7 @@ export const moduleIcons = {
         },
 
         fetchIcons({ commit }) {
-            return api.get('/svg/list').then(response => {
+            return api.get('/api/svg/list').then(response => {
                 let icons = response.data.data;
                 icons.forEach(icon => {
                     icon.url = `${baseUrl}/${icon.name}`;

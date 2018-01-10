@@ -24,14 +24,15 @@
           <div class="upload__item"
             v-if="file.type === 'image/svg+xml' && file.status === 'success'">
             <span class="upload__item-image">
-              <img v-bind:src="file.dataUrl"
-                alt="">
+              <img :src="file.dataUrl"
+                :alt="file.name">
             </span>
             <span class="upload__item-name">{{ file.name }}</span>
             <button type="button"
               class="btn btn--actions upload__item-actions">
               <svg xmlns="http://www.w3.org/2000/svg"
                    class="btn__icon">
+                   <title>Actions</title>
                   <use href="#dots__16px" />
               </svg>
             </button>
@@ -49,7 +50,8 @@
           <div class="upload__item upload__item--warning"
             v-if="file.type !== 'image/svg+xml'">
             <svg xmlns="http://www.w3.org/2000/svg"
-              class="upload__item-icon">
+              class="upload__item-icon"
+              aria-hidden="true">
               <use href="#warning_32px"></use>
             </svg>
             <p class="upload__item-message">
@@ -61,6 +63,7 @@
               class="btn btn--close upload__item-close">
               <svg xmlns="http://www.w3.org/2000/svg"
                    class="btn__icon">
+                   <title>Remove this message</title>
                   <use href="#cross_16px" />
               </svg>
             </button>
@@ -69,7 +72,8 @@
           <div class="upload__item upload__item--error"
             v-else>
             <svg xmlns="http://www.w3.org/2000/svg"
-              class="upload__item-icon">
+              class="upload__item-icon"
+              ariz-hidden="true">
               <use href="#cross2_32px"></use>
             </svg>
             <p class="upload__item-message">
@@ -81,6 +85,7 @@
               class="btn btn--close upload__item-close">
               <svg xmlns="http://www.w3.org/2000/svg"
                    class="btn__icon">
+                   <title>Remove this message</title>
                   <use href="#cross_16px" />
               </svg>
             </button>
