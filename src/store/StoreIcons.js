@@ -28,7 +28,7 @@ export const moduleIcons = {
       },
 
       filteredIcons: state => {
-        return state.icons.filter(icon => icon.name.match(state.searchName));
+        return state.icons.filter(icon => icon.name.match(new RegExp(state.searchName, "i")));
       }
 
     },
