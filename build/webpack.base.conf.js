@@ -1,4 +1,5 @@
 'use strict'
+const chalk = require('chalk');
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')

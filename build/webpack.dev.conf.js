@@ -1,6 +1,5 @@
 'use strict'
 const utils = require('./utils')
-const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
