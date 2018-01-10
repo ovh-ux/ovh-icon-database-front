@@ -5,7 +5,8 @@
           to="/upload">
           <span class="addButton__icon-container">
             <svg xmlns="http://www.w3.org/2000/svg"
-                 class="addButton__icon">
+                 class="addButton__icon"
+                 aria-hidden="true">
                 <use href="#plus_20px" />
             </svg>
           </span>

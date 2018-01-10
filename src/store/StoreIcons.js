@@ -4,9 +4,13 @@ import { api } from '../utils/request';
 
 const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`;
 
+console.log("===>", process.env);
+alert(JSON.stringify(process.env))
+
 export const moduleIcons = {
     state: {
-        icons: []
+        icons: [],
+        searchName: ''
     },
     getters: {
 
@@ -20,6 +24,14 @@ export const moduleIcons = {
 
       iconsCount: state => {
         return state.icons.length;
+      },
+
+      getSearchName: state => {
+        return state.searchName;
+      },
+
+      filteredIcons: state => {
+        return state.icons.filter(icon => icon.name.match(new RegExp(state.searchName, 'i')));
       }
 
     },
@@ -29,9 +41,13 @@ export const moduleIcons = {
             state.icons = icons;
         },
 
+        setSearchName(state, value) {
+            state.searchName = value;
+        },
+
         selectIcon(state, icon) {
             var currentIconIdx = state.icons.findIndex((elm) => {
-                return elm.id === icon.id;
+                return elm.url === icon.url;
             });
 
             Vue.set(
@@ -47,11 +63,16 @@ export const moduleIcons = {
             commit('selectIcon', icon);
         },
 
+        setSearchName({ commit }, value) {
+          commit('setSearchName', value)
+        },
+
         fetchIcons({ commit }) {
-            return api.get('/svg/list').then(response => {
+            return api.get('/api/svg/list').then(response => {
                 let icons = response.data.data;
                 icons.forEach(icon => {
                     icon.url = `${baseUrl}/${icon.name}`;
+                    icon.name = icon.name.replace('.svg','');
                 })
                 commit('addIcons', icons);
             });

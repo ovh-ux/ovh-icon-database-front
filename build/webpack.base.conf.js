@@ -1,4 +1,5 @@
 'use strict'
+const chalk = require('chalk');
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
@@ -8,6 +9,21 @@ var SvgStore = require('webpack-svgstore-plugin');
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+
+console.log(process.env);
+
+var envVar = [
+  'OSS_URL',
+  'OSS_AUTH',
+  'OSS_CONTAINER',
+  'API_URL'
+];
+envVar.forEach(varName => {
+  if (!process.env[varName]) {
+    console.log(chalk.red.bold(`>>> Env var ${varName} is missing !`));
+  }
+})
+
 
 module.exports = {
   context: path.resolve(__dirname, '../'),

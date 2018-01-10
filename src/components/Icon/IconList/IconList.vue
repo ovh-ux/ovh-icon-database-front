@@ -2,7 +2,7 @@
   <ul class="icons-list">
       <add-button></add-button>
       <icon
-          v-for="(icon, index) in icons"
+          v-for="(icon, index) in filteredIcons"
           v-bind:key="icon.id"
           v-bind:icon="icon"
           v-bind:index="index"
@@ -20,8 +20,8 @@ export default {
         total() {
             return this.$store.state.moduleIcons.icons.length;
         },
-        icons() {
-            return this.$store.state.moduleIcons.icons;
+        filteredIcons() {
+          return this.$store.getters.filteredIcons;
         }
     },
     components: {
