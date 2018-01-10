@@ -12,6 +12,12 @@
       Sorry, your icons couldn't be loaded.
       <br>Please try again later.
     </p>
+    <div class="icon-error__button-row">
+      <router-link class="btn btn--primary"
+        to="/">
+        Refresh now
+      </router-link>
+    </div>
   </div>
 </template>
 

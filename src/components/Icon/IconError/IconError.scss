@@ -49,6 +49,11 @@
     color: $secondaryTextColor;
   }
 
+  &__button-row {
+    padding: 0 $spaceS2;
+    text-align: center;
+  }
+
   @media screen and (min-width: $bpXS) {
     &__illustration {
       &:first-child,

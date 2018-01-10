@@ -1,14 +1,14 @@
 <template>
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
-	<icon-error v-if="error"></icon-error>
+        <icon-error v-if="error"></icon-error>
         <div v-else>
-		<icon-filter></icon-filter>
-		<transition name="icon-loading" mode="out-in">
-		  <icon-loading v-if="loading"></icon-loading>
-		  <icon-list v-else></icon-list>
-		</transition>
-		<download-panel v-if="hasSelectedIcon"></download-panel>
+            <icon-filter></icon-filter>
+            <transition name="icon-loading" mode="out-in">
+                <icon-loading v-if="loading"></icon-loading>
+                <icon-list v-else></icon-list>
+            </transition>
+            <download-panel v-if="hasSelectedIcon"></download-panel>
         </div>
     </section>
 </template>
@@ -48,7 +48,8 @@ export default {
       IconFilter,
       IconLoading,
       IconList,
-      DownloadPanel
+      DownloadPanel,
+      IconError
     }
 }
 </script>
