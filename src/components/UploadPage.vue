@@ -20,7 +20,7 @@
 
     <template slot="clip-uploader-body"
       slot-scope="props">
-      <ul class="upload__list">
+      <ul class="upload__list" v-if="props.files.length > 0">
         <li class="upload__item-container"
           v-for="(file, index) in props.files">
           <div class="upload__item" v-if="file.status === 'success'">
