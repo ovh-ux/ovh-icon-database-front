@@ -1,17 +1,19 @@
 <template>
+
   <vue-clip :options="options"
     class="upload">
+
     <template slot="clip-uploader-action"
       slot-scope="params">
       <div class="upload__area"
         v-bind:class="{'upload__area--file-dragged' : params.dragging}">
         <div class="upload__area-content dz-message">
           <p class="upload__message">
-            Drop your icons in .svg format in this area
+            Drop your icon in .svg format in this area
             <br>or
           </p>
           <button type="button"
-            class="upload__button btn btn--primary">Upload files</button>
+            class="upload__button btn btn--primary">Upload file</button>
         </div>
       </div>
     </template>
@@ -97,7 +99,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'UploadPage',
   components: {
@@ -105,10 +106,11 @@ export default {
   data: () => {
     return {
       options: {
-        url: '/upload',
+        url: '/api/svg/upload',
         acceptedFiles: 'image/svg+xml',
-        uploadMultiple: true,
-        parallelUploads: true
+        uploadMultiple: false,
+        parallelUploads: 1,
+        paramName: 'svg'
       }
     }
   }
