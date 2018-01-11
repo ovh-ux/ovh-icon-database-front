@@ -6,7 +6,7 @@
           <icon-loading v-if="loading"></icon-loading>
           <icon-list v-else></icon-list>
         </transition>
-        <download-panel v-if="hasSelectedIcon"></download-panel>
+        <!--<download-panel v-if="hasSelectedIcon"></download-panel>-->
     </section>
 </template>
 
