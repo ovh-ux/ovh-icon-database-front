@@ -14,7 +14,7 @@
             </span>
           </router-link>
       </h1>
-      <login-button></login-button>
+      <!--<login-button></login-button>-->
     </header>
 </template>
 
