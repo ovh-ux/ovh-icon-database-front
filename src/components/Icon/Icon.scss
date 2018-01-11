@@ -57,9 +57,16 @@
     transform: translateY(3rem);
   }
 
-  &-enter-active {
-    --delay: calc(var(--idx) * .1s + .1s);
-    transition: transform .4s ease-out var(--delay), opacity .75s ease-out var(--delay);
+  $cappedValue: 40;
+  &-enter-active{
+    transition: transform .4s ease-out ($cappedValue * .06s + .1s), opacity .75s ease-out ($cappedValue * .06s + .1s);
+  }
+
+  @for $i from 0 through $cappedValue {
+    &-enter-active:not(:nth-child(n + #{$i})) {
+      $delay: calc(var(--idx) * .06s + .1s);
+      transition: transform .4s ease-out $delay, opacity .75s ease-out $delay;
+    }
   }
 
   &-enter-to,
