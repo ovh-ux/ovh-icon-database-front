@@ -1,12 +1,14 @@
 <template>
   <section class="upload">
-    <router-link class="upload__back-link link" to="/">
+    <router-link class="upload__back-link link link--back" to="/">
       <svg xmlns="http://www.w3.org/2000/svg"
-        class="upload__back-link-arrow"
+        class="link__icon"
         aria-hidden="true">
         <use href="#leftarrow_16px"></use>
       </svg>
-      Back to library
+      <span class="link__label">
+        Back to library
+      </span>
     </router-link>
 
     <page-title :pagename="'Upload Icons'"></page-title>

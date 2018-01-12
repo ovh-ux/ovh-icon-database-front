@@ -93,7 +93,8 @@ button {
   text-decoration: none;
   transition: all 0.2s ease-in;
 
-  &::before {
+  &::before,
+  &__label::before {
     content: "";
     display: block;
     width: 100%;
@@ -112,9 +113,31 @@ button {
   &:focus {
     color: mix($linkColor, $textColor, 60%);
 
-    &::before {
+    &::before,
+    .link__label::before {
       transform: scaleX(.3);
       background-color: mix($linkColor, $textColor, 60%);
     }
+  }
+
+  &--back {
+    &::before {
+      content: none;
+      display: none;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: $sizeIconS2;
+    height: $sizeIconS2;
+    vertical-align: middle;
+    margin-right: $spaceS2;
+  }
+
+  &__label {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
   }
 }
