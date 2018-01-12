@@ -88,6 +88,7 @@ button {
 %link {
   @extend %text--link;
 
+  display: inline-block;
   position: relative;
   text-decoration: none;
   transition: all 0.2s ease-in;
@@ -99,7 +100,7 @@ button {
     height: 1px;
     position: absolute;
     left: 0;
-    bottom: $spaceS3;
+    bottom: 0;
     background-color: $linkColor;
     transform-origin: center;
     transform: scaleX(1);

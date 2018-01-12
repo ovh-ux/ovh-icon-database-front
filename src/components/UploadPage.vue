@@ -1,8 +1,8 @@
 <template>
   <section>
-
-    <router-link class="upload__back-link"
-      to="/">&lt; back</router-link>
+    <router-link class="upload__back-link link" to="/">
+      Back to library
+    </router-link>
 
     <vue-clip :options="options" class="upload">
 
