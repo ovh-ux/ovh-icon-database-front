@@ -75,20 +75,25 @@ export const moduleIcons = {
                     div.innerHTML = icon.raw;
 
                     let svg = div.firstElementChild;
+
                     svg.removeAttribute('id');
                     svg.removeAttribute('data-name');
 
-                    let defs = svg.querySelector('defs');
-                    if (defs) {
-                      defs.remove();
+                    let children = div.getElementsByTagName('*');
+                    let hash = {};
+                    for (let i = 0 ; i < children.length ; i++) {
+                      if (children[i].classList) {
+                        for(let j = 0; j < children[i].classList.length; j++) {
+                            hash[children[i].classList[j]] = true;
+                        }
+                      }
                     }
-
-                    let style = svg.querySelector('style');
-                    if (style) {
-                      style.remove();
+                    let classes = Object.keys(hash);
+                    for (let i = 0 ; i < classes.length ; i++) {
+                      div.innerHTML = div.innerHTML.replace(new RegExp(classes[i],'g'), icon.name + '--' + classes[i]);
                     }
                     icon.raw = div.innerHTML;
-                    //icon.raw = icon.raw.replace(regexp,'');
+
                 })
                 commit('addIcons', icons);
             });
