@@ -70,7 +70,25 @@ export const moduleIcons = {
                 icons.forEach(icon => {
                     icon.url = `${baseUrl}/${icon.name}`;
                     icon.name = icon.name.replace('.svg','');
-                    icon.raw = icon.raw.replace(/\<defs\>.*\<\/defs\>/gi,'');
+
+                    let div = document.createElement('div');
+                    div.innerHTML = icon.raw;
+
+                    let svg = div.firstElementChild;
+                    svg.removeAttribute('id');
+                    svg.removeAttribute('data-name');
+
+                    let defs = svg.querySelector('defs');
+                    if (defs) {
+                      defs.remove();
+                    }
+
+                    let style = svg.querySelector('style');
+                    if (style) {
+                      style.remove();
+                    }
+                    icon.raw = div.innerHTML;
+                    //icon.raw = icon.raw.replace(regexp,'');
                 })
                 commit('addIcons', icons);
             });
