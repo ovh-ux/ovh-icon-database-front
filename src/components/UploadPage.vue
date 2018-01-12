@@ -1,10 +1,17 @@
 <template>
-  <section>
+  <section class="upload">
     <router-link class="upload__back-link link" to="/">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        class="upload__back-link-arrow"
+        aria-hidden="true">
+        <use href="#leftarrow_16px"></use>
+      </svg>
       Back to library
     </router-link>
 
-    <vue-clip :options="options" class="upload">
+    <page-title :pagename="'Upload Icons'"></page-title>
+
+    <vue-clip :options="options" class="upload__file-uploader">
 
       <template slot="clip-uploader-action"
         slot-scope="params">
@@ -106,6 +113,8 @@
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle/PageTitle'
+
 export default {
   name: 'UploadPage',
   data: () => {
@@ -123,6 +132,9 @@ export default {
     deleteMessage: (files, index) => {
       files.splice(index, 1);
     }
+  },
+  components: {
+    PageTitle
   }
 }
 </script>

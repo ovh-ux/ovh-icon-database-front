@@ -1,11 +1,18 @@
 .upload {
-  display: flex;
-  padding: $spaceL3 $spaceBase;
-  flex-direction: column-reverse;
+  padding: 0 $spaceBase;
 
   &__back-link {
     margin-top: $spaceBase;
-    margin-left: $spaceBase;
+
+    &-arrow {
+      width: $sizeIconS2;
+      height: $sizeIconS2;
+    }
+  }
+
+  &__file-uploader {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   &__area {
