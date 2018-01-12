@@ -4,8 +4,6 @@ import { api } from '../utils/request';
 
 const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`;
 
-console.log("===>", process.env);
-
 export const moduleIcons = {
     state: {
         icons: [],
@@ -72,6 +70,25 @@ export const moduleIcons = {
                 icons.forEach(icon => {
                     icon.url = `${baseUrl}/${icon.name}`;
                     icon.name = icon.name.replace('.svg','');
+
+                    let div = document.createElement('div');
+                    div.innerHTML = icon.raw;
+
+                    let svg = div.firstElementChild;
+                    svg.removeAttribute('id');
+                    svg.removeAttribute('data-name');
+
+                    let defs = svg.querySelector('defs');
+                    if (defs) {
+                      defs.remove();
+                    }
+
+                    let style = svg.querySelector('style');
+                    if (style) {
+                      style.remove();
+                    }
+                    icon.raw = div.innerHTML;
+                    //icon.raw = icon.raw.replace(regexp,'');
                 })
                 commit('addIcons', icons);
             });
