@@ -3,6 +3,13 @@
   padding: $spaceL3 $spaceBase;
   flex-direction: column-reverse;
 
+  &__back-link {
+    display: block;
+    padding: 1rem 0 0 1rem;
+    text-decoration: none;
+    color: $linkColor;
+  }
+
   &__area {
     display: flex;
     box-sizing: border-box;
