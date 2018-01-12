@@ -70,6 +70,7 @@ export const moduleIcons = {
                 icons.forEach(icon => {
                     icon.url = `${baseUrl}/${icon.name}`;
                     icon.name = icon.name.replace('.svg','');
+                    icon.raw = icon.raw.replace(/\<defs\>.*\<\/defs\>/gi,'');
                 })
                 commit('addIcons', icons);
             });
