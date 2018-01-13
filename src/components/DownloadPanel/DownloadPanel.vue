@@ -30,7 +30,6 @@ export default {
             link.setAttribute('href', icon.url);
             link.click();
         });
-
         document.body.removeChild(link);
       }
     }
