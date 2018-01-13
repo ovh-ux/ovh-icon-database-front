@@ -27,6 +27,7 @@ export default {
 
 
         this.selectedIcons.forEach(icon => {
+            console.log("====>", icon.url)
             link.setAttribute('href', icon.url);
             link.click();
         });
