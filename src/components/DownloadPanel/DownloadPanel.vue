@@ -2,7 +2,8 @@
   <div class="download-panel">
     <span class="download-panel__title">{{ selectedIcons.length }} icon(s) selected</span>
     <button class="btn btn--primary download-panel__button"
-      type="submit">
+      v-on:click="downloadSVGs"
+      type="button">
       Download svg
     </button>
   </div>
@@ -16,6 +17,23 @@ export default {
     computed: mapGetters([
       'selectedIcons'
     ]),
+    methods: {
+
+      downloadSVGs() {
+        let link = document.createElement('a');
+        link.setAttribute('download', null);
+        link.style.display = 'none';
+        document.body.appendChild(link);
+
+
+        this.selectedIcons.forEach(icon => {
+            link.setAttribute('href', icon.url);
+            link.click();
+        });
+
+        document.body.removeChild(link);
+      }
+    }
 }
 </script>
 
