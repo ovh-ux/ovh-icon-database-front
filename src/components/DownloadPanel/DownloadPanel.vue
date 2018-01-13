@@ -25,7 +25,6 @@ export default {
         link.style.display = 'none';
         document.body.appendChild(link);
 
-
         this.selectedIcons.forEach(icon => {
             link.setAttribute('href', icon.url);
             link.click();
