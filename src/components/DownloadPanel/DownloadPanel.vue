@@ -10,7 +10,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
+import download from 'downloadjs';
 
 export default {
     name: 'DownloadPanel',
@@ -20,14 +21,8 @@ export default {
     methods: {
 
       downloadSVGs() {
-        let link = document.createElement('a');
-        link.setAttribute('download', null);
-        link.style.display = 'none';
-        document.body.appendChild(link);
-
         this.selectedIcons.forEach(icon => {
-            link.setAttribute('href', icon.url);
-            link.click();
+          download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
         });
 
         document.body.removeChild(link);
