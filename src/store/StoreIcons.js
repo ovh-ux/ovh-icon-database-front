@@ -1,4 +1,6 @@
 import Vue from 'vue';
+import download from 'downloadjs';
+import Zip from 'jszip';
 
 import { api } from '../utils/request';
 
@@ -7,7 +9,8 @@ const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env
 export const moduleIcons = {
     state: {
         icons: [],
-        searchName: ''
+        searchName: '',
+        showModal: false
     },
     getters: {
 
@@ -29,6 +32,10 @@ export const moduleIcons = {
 
       filteredIcons: state => {
         return state.icons.filter(icon => icon.name.match(new RegExp(state.searchName, 'i')));
+      },
+
+      modalState: state => {
+        return state.showModal;
       }
 
     },
@@ -51,6 +58,10 @@ export const moduleIcons = {
               state.icons[currentIconIdx], 'selected',
               !state.icons[currentIconIdx].selected
             );
+        },
+
+        toggleModal(state, modalState) {
+          state.showModal = modalState;
         }
 
     },
@@ -97,6 +108,36 @@ export const moduleIcons = {
                 })
                 commit('addIcons', icons);
             });
+        },
+
+        /*downloadSVGs() {
+          console.log(this.getters.selectedIcons);
+          this.getters.selectedIcons.forEach(icon => {
+            download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
+          });
+
+          document.body.removeChild(link);
+        },*/
+
+        downloadSVGs() {
+         if (this.getters.selectedIcons.length === 1 ) {
+           this.getters.selectedIcons.forEach(icon => {
+             download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
+           });
+         } else {
+           let zip = new Zip();
+           this.getters.selectedIcons.forEach(icon => {
+             zip.file(`${icon.name}.svg`, icon.raw);
+           });
+           zip.generateAsync({type : "blob"})
+           .then( blob => {
+             download(blob, "icons.zip", "application/zip");
+           });
+         }
+       },
+
+        toggleModal({ commit }, modalState) {
+          commit('toggleModal', modalState)
         }
 
     }
