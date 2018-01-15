@@ -15,4 +15,9 @@
   &--file-dragged {
     background-color: $foam;
   }
+
+  &__message {
+    margin-top: 0;
+    margin-bottom: $spaceBase;
+  }
 }

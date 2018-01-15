@@ -7,7 +7,7 @@
         <br>or
       </p>
       <button type="button"
-        class="upload-area__button btn btn--primary">Upload file</button>
+        class="btn btn--primary">Upload file</button>
     </div>
   </div>
 </template>
