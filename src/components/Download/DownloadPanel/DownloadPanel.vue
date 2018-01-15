@@ -4,11 +4,11 @@
       {{ selectedIcons.length }} icon(s) selected
     </span>
     <div class="download-panel__button-row">
-      <button class="btn btn--default download-panel__button"
+      <!--<button class="btn btn--default download-panel__button"
         type="button"
         @click="toggleModal(true)">
         Get code
-      </button>
+      </button>-->
       <button class="btn btn--primary download-panel__button"
         @click="downloadSVGs"
         type="button">

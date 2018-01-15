@@ -3,10 +3,12 @@ button {
 }
 
 .btn {
+  display: inline-block;
   position: relative;
   z-index: 1;
   font-weight: $fwMedium;
   border-radius: 3px;
+  color: $textColor;
   cursor: pointer;
 
   &:focus {
@@ -17,6 +19,7 @@ button {
     padding: $spaceS2 $spaceBase;
     border: solid 1px $brandPrimary;
     background-color: $brandPrimary;
+    text-decoration: none;
     transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
     &:not(.btn--disabled) {
@@ -33,6 +36,7 @@ button {
   &--actions {
     border: solid 1px $lightBorder;
     background-color: transparent;
+    text-decoration: none;
     transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
     &:not(.btn--disabled) {

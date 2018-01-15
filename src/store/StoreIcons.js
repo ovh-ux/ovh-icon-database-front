@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import download from 'downloadjs';
+import Zip from 'jszip';
 
 import { api } from '../utils/request';
 
@@ -109,14 +110,31 @@ export const moduleIcons = {
             });
         },
 
-        downloadSVGs() {
+        /*downloadSVGs() {
           console.log(this.getters.selectedIcons);
           this.getters.selectedIcons.forEach(icon => {
             download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
           });
 
           document.body.removeChild(link);
-        },
+        },*/
+
+        downloadSVGs() {
+         if (this.getters.selectedIcons.length === 1 ) {
+           this.getters.selectedIcons.forEach(icon => {
+             download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
+           });
+         } else {
+           let zip = new Zip();
+           this.getters.selectedIcons.forEach(icon => {
+             zip.file(`${icon.name}.svg`, icon.raw);
+           });
+           zip.generateAsync({type : "blob"})
+           .then( blob => {
+             download(blob, "icons.zip", "application/zip");
+           });
+         }
+       },
 
         toggleModal({ commit }, modalState) {
           commit('toggleModal', modalState)
