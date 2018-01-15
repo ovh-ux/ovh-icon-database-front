@@ -11,7 +11,9 @@
 
 <script>
 import { mapGetters } from 'vuex';
+
 import download from 'downloadjs';
+import Zip from 'jszip';
 
 export default {
     name: 'DownloadPanel',
@@ -21,11 +23,23 @@ export default {
     methods: {
 
       downloadSVGs() {
-        this.selectedIcons.forEach(icon => {
-          download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
-        });
+        if (this.selectedIcons.length === 1 ) {
+          this.selectedIcons.forEach(icon => {
+            download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
+          });
+        } else {
+          let zip = new Zip();
 
-        document.body.removeChild(link);
+          this.selectedIcons.forEach(icon => {
+            zip.file(`${icon.name}.svg`, icon.raw);
+          });
+
+          zip.generateAsync({type : "blob"})
+          .then( blob => {
+            download(blob, "icons.svg", "application/zip");
+          });
+        }
+
       }
     }
 }
