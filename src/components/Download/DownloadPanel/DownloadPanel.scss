@@ -1,0 +1,40 @@
+.download-panel {
+  box-sizing: border-box;
+  width: 100%;
+  padding: $spaceBase;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: $lightBackground;
+  text-align: center;
+
+  &__title {
+    display: block;
+    margin-bottom: $spaceBase;
+  }
+
+  &__button {
+    margin: 0 $spaceS2;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $bpS) {
+    max-width: 30rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+}

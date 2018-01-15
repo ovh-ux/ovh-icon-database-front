@@ -17,7 +17,8 @@ import PageTitle from '@/components/PageTitle/PageTitle'
 import IconFilter from '@/components/Icon/IconFilter/IconFilter'
 import IconLoading from '@/components/Icon/IconLoading/IconLoading'
 import IconList from '@/components/Icon/IconList/IconList'
-import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
+import DownloadPanel from '@/components/Download/DownloadPanel/DownloadPanel'
+import DownloadCodeModal from '@/components/Download/DownloadCodeModal/DownloadCodeModal'
 
 export default {
     name: 'HomePage',
@@ -43,7 +44,8 @@ export default {
       IconFilter,
       IconLoading,
       IconList,
-      DownloadPanel
+      DownloadPanel,
+      DownloadCodeModal
     }
 }
 </script>
