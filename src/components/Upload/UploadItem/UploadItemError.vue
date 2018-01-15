@@ -1,11 +1,11 @@
 <template>
   <div class="upload-item upload-item--error">
     <svg xmlns="http://www.w3.org/2000/svg"
-      class="upload__item-icon"
+      class="upload-item__icon"
       ariz-hidden="true">
       <use href="#cross2_32px"></use>
     </svg>
-    <p class="upload__item-message">
+    <p class="upload-item__message">
       {{ file.name }}
       <br>
       Sorry, something went wrong with the upload of this file. Please retry.

@@ -1,10 +1,10 @@
 <template>
   <div class="upload-item">
-    <span class="upload__item-image">
+    <span class="upload-item__image">
       <img :src="file.dataUrl"
         :alt="file.name">
     </span>
-    <span class="upload__item-name">{{ file.name }}</span>
+    <span class="upload-item__name">{{ file.name }}</span>
   </div>
 </template>
 

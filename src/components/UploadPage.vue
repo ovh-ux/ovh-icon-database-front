@@ -37,7 +37,7 @@ export default {
   data: () => {
     return {
       options: {
-        url: '/api/svg/upload/multi',
+        url: '/api/svg/rupload/multi',
         acceptedFiles: 'image/svg+xml',
         uploadMultiple: true,
         parallelUploads: 10,

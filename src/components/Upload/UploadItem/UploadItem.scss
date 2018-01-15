@@ -13,10 +13,10 @@
     box-shadow: 1px 1px 2px fade-out($warningDark, .85);
 
     .upload-item {
-      &-icon {
+      &__icon {
         fill: $warningDark;
       }
-      &-message {
+      &__message {
         padding-right: $spaceBase * 3;
         color: $warningDark;
       }
@@ -29,11 +29,11 @@
     box-shadow: 1px 1px 2px fade-out($errorDark, .85);
 
     .upload-item {
-      &-icon {
+      &__icon {
         stroke: $errorDark;
         fill: none;
       }
-      &-message {
+      &__message {
         padding-right: $spaceBase * 3;
         color: $errorDark;
       }
@@ -45,20 +45,20 @@
     box-shadow: none;
 
     .upload-item {
-      &-image,
-      &-name,
-      &-actions {
+      &__image,
+      &__name,
+      &__actions {
         opacity: .4;
       }
 
-      &-image {
+      &__image {
         border: solid 1px $lightBorder;
         border-radius: 50%;
         transform-origin: center;
         animation: imageInProgressAnim 1s ease-in-out infinite alternate;
       }
 
-      &-progress {
+      &__progress-bar {
         height: 3px;
         position: absolute;
         bottom: -1px;
@@ -70,8 +70,8 @@
     }
   }
 
-  &-image,
-  &-icon {
+  &__image,
+  &__icon {
     display: inline-block;
     width: $sizeIconBase;
     height: $sizeIconBase;
@@ -80,25 +80,25 @@
     text-align: center;
   }
 
-  &-image {
+  &__image {
     margin-right: $spaceS2;
   }
 
-  &-icon {
+  &__icon {
     margin-right: $spaceBase;
   }
 
   &-name,
-  &-message {
+  &__message {
     flex-grow: 1;
     margin: 0;
   }
 
-  &-actions {
+  &__actions {
     flex-grow: 0;
   }
 
-  &-close {
+  &__close {
     position: absolute;
     top: 0;
     right: 0;
