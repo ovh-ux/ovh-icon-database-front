@@ -7,6 +7,7 @@
           <icon-list v-else></icon-list>
         </transition>
         <download-panel v-if="hasSelectedIcon"></download-panel>
+        <download-code-modal v-if="modalState"></download-code-modal>
     </section>
 </template>
 
@@ -34,7 +35,8 @@ export default {
         });
     },
     computed: mapGetters([
-      'hasSelectedIcon'
+      'hasSelectedIcon',
+      'modalState'
     ]),
     methods: mapActions([
         'fetchIcons'

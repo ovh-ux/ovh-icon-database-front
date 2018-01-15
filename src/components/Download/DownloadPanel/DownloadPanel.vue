@@ -5,11 +5,12 @@
     </span>
     <div class="download-panel__button-row">
       <button class="btn btn--default download-panel__button"
-        type="button">
+        type="button"
+        @click="toggleModal(true)">
         Get code
       </button>
       <button class="btn btn--primary download-panel__button"
-        v-on:click="downloadSVGs"
+        @click="downloadSVGs"
         type="button">
         Download svg
       </button>
@@ -18,24 +19,18 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import download from 'downloadjs';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
     name: 'DownloadPanel',
     computed: mapGetters([
-      'selectedIcons'
+      'selectedIcons',
+      'modalState'
     ]),
-    methods: {
-
-      downloadSVGs() {
-        this.selectedIcons.forEach(icon => {
-          download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
-        });
-
-        document.body.removeChild(link);
-      }
-    }
+    methods: mapActions([
+      'toggleModal',
+      'downloadSVGs'
+    ])
 }
 </script>
 

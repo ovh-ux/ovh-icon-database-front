@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import download from 'downloadjs';
 
 import { api } from '../utils/request';
 
@@ -7,7 +8,8 @@ const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env
 export const moduleIcons = {
     state: {
         icons: [],
-        searchName: ''
+        searchName: '',
+        showModal: false
     },
     getters: {
 
@@ -29,6 +31,10 @@ export const moduleIcons = {
 
       filteredIcons: state => {
         return state.icons.filter(icon => icon.name.match(new RegExp(state.searchName, 'i')));
+      },
+
+      modalState: state => {
+        return state.showModal;
       }
 
     },
@@ -51,6 +57,10 @@ export const moduleIcons = {
               state.icons[currentIconIdx], 'selected',
               !state.icons[currentIconIdx].selected
             );
+        },
+
+        toggleModal(state, modalState) {
+          state.showModal = modalState;
         }
 
     },
@@ -97,6 +107,19 @@ export const moduleIcons = {
                 })
                 commit('addIcons', icons);
             });
+        },
+
+        downloadSVGs() {
+          console.log(this.getters.selectedIcons);
+          this.getters.selectedIcons.forEach(icon => {
+            download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
+          });
+
+          document.body.removeChild(link);
+        },
+
+        toggleModal({ commit }, modalState) {
+          commit('toggleModal', modalState)
         }
 
     }
