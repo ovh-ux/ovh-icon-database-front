@@ -2,7 +2,8 @@
   <ul class="upload-list" v-if="clipProps.files.length > 0">
     <li class="upload-list__item"
       v-for="(file, index) in clipProps.files">
-      <upload-item :file="file" :index="index"></upload-item>
+      <upload-item :file="file" :index="index"
+        :files-list="clipProps.files"></upload-item>
     </li>
   </ul>
 </template>

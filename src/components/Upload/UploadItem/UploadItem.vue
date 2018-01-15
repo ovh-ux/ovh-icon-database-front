@@ -1,5 +1,6 @@
 <template>
-  <component :is="currentView" :file="file" :index="index"></component>
+  <component :is="currentView" :file="file" :index="index"
+    :files-list="filesList"></component>
 </template>
 
 <script>
@@ -11,6 +12,9 @@ import UploadItemInProgress from '@/components/Upload/UploadItem/UploadItemInPro
 export default {
   name: 'UploadItem',
   props: {
+    filesList: {
+      type: Array
+    },
     file: {
       type: Object
     },
