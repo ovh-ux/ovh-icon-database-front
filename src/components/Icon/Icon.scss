@@ -32,9 +32,11 @@
     }
 
     &__visual {
+        display: inline-block;
         width: $sizeIconBase;
         height: $sizeIconBase;
         margin: 0 0 $spaceS2 0;
+        color: transparent;
         fill:none;
         stroke-linejoin:round;
         stroke-linecap:round;

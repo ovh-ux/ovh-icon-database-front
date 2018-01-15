@@ -5,7 +5,7 @@
              class="icon"
              @click="selectIcon(icon)"
              v-bind:class="{ 'icon--selected': icon.selected }">
-             <img class="icon__visual" :src="icon.url" :alt="icon.name" />
+             <span class="icon__visual" v-html="icon.raw"></span>
              <span class="icon__name">{{icon.name}}</span>
           </button>
       </li>

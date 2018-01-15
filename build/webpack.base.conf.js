@@ -10,8 +10,6 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-console.log(process.env);
-
 var envVar = [
   'OSS_URL',
   'OSS_AUTH',
