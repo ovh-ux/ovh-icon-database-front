@@ -24,7 +24,6 @@ export const icons = {
     },
 
     count: state => {
-      console.log('length', state.icons);
       return state.icons.length;
     },
 
