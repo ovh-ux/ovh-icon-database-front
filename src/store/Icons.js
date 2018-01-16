@@ -104,7 +104,6 @@ export const icons = {
     },
 
     downloadSVGs() {
-      console.log(this);
       if (this.getters['icons/count'] === 1 ) {
         this.getters['icons/selected'].forEach(icon => {
           download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
