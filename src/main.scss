@@ -10,6 +10,7 @@
 @import "src/styles/font-styles";
 @import "src/styles/forms";
 @import "src/styles/buttons";
+@import "src/styles/prism-custom-theme";
 
 body {
     @extend %text;
@@ -17,4 +18,9 @@ body {
 
     padding: 0;
     color: $textColor;
+
+    .app--panel-opened {
+        height: 100vh;
+        overflow: hidden;
+    }
 }

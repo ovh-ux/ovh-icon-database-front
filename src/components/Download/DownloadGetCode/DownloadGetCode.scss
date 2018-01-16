@@ -9,8 +9,6 @@
   }
 
   &__code {
-    @extend %code;
-
     padding: $spaceS2;
     margin: 0;
     border: solid 1px $lightBorder;
