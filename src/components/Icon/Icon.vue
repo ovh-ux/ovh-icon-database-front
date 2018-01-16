@@ -17,7 +17,9 @@ import { mapActions } from 'vuex'
 
 export default {
     name: 'Icon',
-    methods: mapActions(['selectIcon']),
+    methods: mapActions({
+      'selectIcon': 'icons/select'
+    }),
     props: {
         icon: {
             type: Object

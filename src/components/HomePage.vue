@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex';
 
-import PageTitle from '@/components/PageTitle/PageTitle'
-import IconFilter from '@/components/Icon/IconFilter/IconFilter'
-import IconLoading from '@/components/Icon/IconLoading/IconLoading'
-import IconList from '@/components/Icon/IconList/IconList'
-import DownloadPanel from '@/components/Download/DownloadPanel/DownloadPanel'
-import IconError from '@/components/Icon/IconError/IconError'
+import PageTitle from '@/components/PageTitle/PageTitle';
+import IconFilter from '@/components/Icon/IconFilter/IconFilter';
+import IconLoading from '@/components/Icon/IconLoading/IconLoading';
+import IconList from '@/components/Icon/IconList/IconList';
+import DownloadPanel from '@/components/Download/DownloadPanel/DownloadPanel';
+import IconError from '@/components/Icon/IconError/IconError';
 
 export default {
     name: 'HomePage',
@@ -37,12 +37,12 @@ export default {
             this.loading = false;
         });
     },
-    computed: mapGetters([
-      'hasSelectedIcon',
-    ]),
-    methods: mapActions([
-        'fetchIcons'
-    ]),
+    computed: mapGetters({
+      'hasSelectedIcon': 'icons/hasSelected',
+    }),
+    methods: mapActions({
+      'fetchIcons': 'icons/fetch'
+    }),
     components: {
       PageTitle,
       IconFilter,
@@ -51,7 +51,7 @@ export default {
       DownloadPanel,
       IconError,
     }
-}
+};
 </script>
 
 <style lang="scss" scoped>

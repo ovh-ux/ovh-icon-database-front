@@ -16,9 +16,9 @@ import 'prismjs/themes/prism.css'
 
 export default {
   name: 'DownloadGetCode',
-  computed: mapGetters([
-    'selectedIcons',
-  ]),
+  computed: mapGetters({
+    'selectedIcons': 'icons/selected',
+  }),
   methods: {
     getHighlightedSvg(svg) {
       return Prism.highlight(beautify(svg), Prism.languages.markup);

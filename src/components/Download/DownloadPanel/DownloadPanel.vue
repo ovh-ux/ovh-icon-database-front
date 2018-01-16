@@ -55,12 +55,12 @@ import DownloadGetCode from '@/components/Download/DownloadGetCode/DownloadGetCo
 export default {
     name: 'DownloadPanel',
     computed: mapGetters({
-      'selectedIcons': 'selectedIcons',
+      'selectedIcons': 'icons/selected',
       'modalState': 'downloadModal/isOpen'
     }),
     methods: mapActions({
       'toggleModal': 'downloadModal/toggle',
-      'downloadSVGs': 'downloadSVGs'
+      'downloadSVGs': 'icons/downloadSVGs'
     }),
     components: {
       DownloadGetCode

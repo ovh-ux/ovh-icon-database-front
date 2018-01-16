@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-export const moduleDownloadModal = {
+export const downloadModal = {
   namespaced: true,
   state: {
     open: false
@@ -20,7 +20,6 @@ export const moduleDownloadModal = {
   },
   actions: {
     toggle({ commit }) {
-      console.log('toggle');
       commit('TOGGLE_DOWNLOAD_MODAL');
     }
   }
