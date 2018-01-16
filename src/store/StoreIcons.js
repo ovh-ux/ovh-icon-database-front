@@ -110,15 +110,6 @@ export const moduleIcons = {
             });
         },
 
-        /*downloadSVGs() {
-          console.log(this.getters.selectedIcons);
-          this.getters.selectedIcons.forEach(icon => {
-            download(icon.raw, `${icon.name}.svg`, "image/svg+xml");
-          });
-
-          document.body.removeChild(link);
-        },*/
-
         downloadSVGs() {
          if (this.getters.selectedIcons.length === 1 ) {
            this.getters.selectedIcons.forEach(icon => {
