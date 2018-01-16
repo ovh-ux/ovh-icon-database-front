@@ -9,7 +9,6 @@
                 <icon-list v-else></icon-list>
             </transition>
             <download-panel v-if="hasSelectedIcon"></download-panel>
-            <download-code-modal v-if="modalState"></download-code-modal>
         </div>
     </section>
 </template>
@@ -23,7 +22,6 @@ import IconLoading from '@/components/Icon/IconLoading/IconLoading'
 import IconList from '@/components/Icon/IconList/IconList'
 import DownloadPanel from '@/components/Download/DownloadPanel/DownloadPanel'
 import IconError from '@/components/Icon/IconError/IconError'
-import DownloadCodeModal from '@/components/Download/DownloadCodeModal/DownloadCodeModal'
 
 export default {
     name: 'HomePage',
@@ -41,7 +39,6 @@ export default {
     },
     computed: mapGetters([
       'hasSelectedIcon',
-      'modalState'
     ]),
     methods: mapActions([
         'fetchIcons'
@@ -53,7 +50,6 @@ export default {
       IconList,
       DownloadPanel,
       IconError,
-      DownloadCodeModal
     }
 }
 </script>
