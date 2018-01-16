@@ -32,10 +32,6 @@ export const moduleIcons = {
 
       filteredIcons: state => {
         return state.icons.filter(icon => icon.name.match(new RegExp(state.searchName, 'i')));
-      },
-
-      modalState: state => {
-        return state.showModal;
       }
 
     },
@@ -59,10 +55,6 @@ export const moduleIcons = {
               !state.icons[currentIconIdx].selected
             );
         },
-
-        toggleModal(state, modalState) {
-          state.showModal = modalState;
-        }
 
     },
     actions: {
@@ -125,11 +117,7 @@ export const moduleIcons = {
              download(blob, "icons.zip", "application/zip");
            });
          }
-       },
-
-        toggleModal({ commit }, modalState) {
-          commit('toggleModal', modalState)
-        }
+       }
 
     }
 };

@@ -34,7 +34,7 @@
         <button v-if="!modalState"
           class="btn btn--default download-panel__button"
           type="button"
-          @click="toggleModal(true)">
+          @click="toggleModal()">
           Get code
         </button>
         <button class="btn btn--primary download-panel__button"
@@ -54,14 +54,14 @@ import DownloadGetCode from '@/components/Download/DownloadGetCode/DownloadGetCo
 
 export default {
     name: 'DownloadPanel',
-    computed: mapGetters([
-      'selectedIcons',
-      'modalState'
-    ]),
-    methods: mapActions([
-      'toggleModal',
-      'downloadSVGs'
-    ]),
+    computed: mapGetters({
+      'selectedIcons': 'selectedIcons',
+      'modalState': 'downloadModal/isOpen'
+    }),
+    methods: mapActions({
+      'toggleModal': 'downloadModal/toggle',
+      'downloadSVGs': 'downloadSVGs'
+    }),
     components: {
       DownloadGetCode
     }
