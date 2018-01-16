@@ -18,9 +18,9 @@
 
       <div class="download-code-modal__body">
         <div class="download-code-modal__icon-block"
-          v-for="icon in 4">
+          v-for="icon in selectedIcons">
           <h3 class="download-code-modal__icon-name">
-            {{ icon.name }} Icon
+            {{ icon.name }}
           </h3>
           <pre class="download-code-modal__icon-code"><!--
             <code>

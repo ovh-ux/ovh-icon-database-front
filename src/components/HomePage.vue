@@ -9,7 +9,7 @@
                 <icon-list v-else></icon-list>
             </transition>
             <download-panel v-if="hasSelectedIcon"></download-panel>
-            <download-code-modal ></download-code-modal>
+            <download-code-modal v-if="modalState"></download-code-modal>
         </div>
     </section>
 </template>
