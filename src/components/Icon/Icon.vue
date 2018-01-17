@@ -17,7 +17,9 @@ import { mapActions } from 'vuex'
 
 export default {
     name: 'Icon',
-    methods: mapActions(['selectIcon']),
+    methods: mapActions({
+      'selectIcon': 'icons/select'
+    }),
     props: {
         icon: {
             type: Object
@@ -28,6 +30,14 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+  .icon__visual svg {
+
+    width: 32px;
+    height: 32px;
+  }
+</style>
 
 <style lang="scss" scoped>
     @import './Icon.scss';

@@ -29,9 +29,9 @@ export default {
         search: ''
       }
     },
-    methods: mapActions([
-      'setSearchName'
-    ])
+    methods: mapActions({
+      'setSearchName': 'icons/setSearchName'
+    })
 }
 </script>
 

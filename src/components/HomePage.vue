@@ -9,21 +9,19 @@
                 <icon-list v-else></icon-list>
             </transition>
             <download-panel v-if="hasSelectedIcon"></download-panel>
-            <!--<download-code-modal v-if="modalState"></download-code-modal>-->
         </div>
     </section>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex';
 
-import PageTitle from '@/components/PageTitle/PageTitle'
-import IconFilter from '@/components/Icon/IconFilter/IconFilter'
-import IconLoading from '@/components/Icon/IconLoading/IconLoading'
-import IconList from '@/components/Icon/IconList/IconList'
-import DownloadPanel from '@/components/Download/DownloadPanel/DownloadPanel'
-import IconError from '@/components/Icon/IconError/IconError'
-import DownloadCodeModal from '@/components/Download/DownloadCodeModal/DownloadCodeModal'
+import PageTitle from '@/components/PageTitle/PageTitle';
+import IconFilter from '@/components/Icon/IconFilter/IconFilter';
+import IconLoading from '@/components/Icon/IconLoading/IconLoading';
+import IconList from '@/components/Icon/IconList/IconList';
+import DownloadPanel from '@/components/Download/DownloadPanel/DownloadPanel';
+import IconError from '@/components/Icon/IconError/IconError';
 
 export default {
     name: 'HomePage',
@@ -39,13 +37,12 @@ export default {
             this.loading = false;
         });
     },
-    computed: mapGetters([
-      'hasSelectedIcon',
-      'modalState'
-    ]),
-    methods: mapActions([
-        'fetchIcons'
-    ]),
+    computed: mapGetters({
+      'hasSelectedIcon': 'icons/hasSelected',
+    }),
+    methods: mapActions({
+      'fetchIcons': 'icons/fetch'
+    }),
     components: {
       PageTitle,
       IconFilter,
@@ -53,9 +50,8 @@ export default {
       IconList,
       DownloadPanel,
       IconError,
-      DownloadCodeModal
     }
-}
+};
 </script>
 
 <style lang="scss" scoped>
