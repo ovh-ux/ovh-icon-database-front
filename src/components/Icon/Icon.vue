@@ -31,6 +31,14 @@ export default {
 }
 </script>
 
+<style lang="scss">
+  .icon__visual svg {
+
+    width: 32px;
+    height: 32px;
+  }
+</style>
+
 <style lang="scss" scoped>
     @import './Icon.scss';
 </style>
