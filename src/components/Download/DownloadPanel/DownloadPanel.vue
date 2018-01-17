@@ -90,4 +90,5 @@ export default {
 
 <style lang="scss" scoped>
     @import "./DownloadPanel.scss";
+    @import ".././DownloadTransitions.scss";
 </style>

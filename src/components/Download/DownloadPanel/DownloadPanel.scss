@@ -5,7 +5,6 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
-  //transition: all .24s cubic-bezier(.69,.19,.71,.87);
 
   &--minimized {
     padding: $spaceBase;
@@ -102,47 +101,5 @@
       justify-content: normal;
       align-items: normal;
     }
-  }
-}
-
-//transitions
-
-.download-panel-overlay {
-  &-enter,
-  &-leave-to {
-    opacity: 0;
-  }
-
-  &-enter-active {
-    transition: opacity .16s ease-out;
-  }
-
-  &-enter-to,
-  &-leave {
-    opacity: 1;
-  }
-
-  &-leave-active {
-    transition: opacity .16s ease-in;
-  }
-}
-
-.download-panel {
-  &-enter,
-  &-leave-to {
-    transform: translateY(100%);
-  }
-
-  &-enter-active {
-    transition: transform .32s cubic-bezier(.69,.19,.71,.87);
-  }
-
-  &-enter-to,
-  &-leave {
-    transform: translateY(0);
-  }
-
-  &-leave-active {
-    transition: transform .32s cubic-bezier(.69,.19,.71,.87);
   }
 }
