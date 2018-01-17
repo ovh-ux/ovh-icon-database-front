@@ -11,7 +11,7 @@
       This is not a valid file : please upload .svg files.
     </p>
     <button type="button"
-      class="btn btn--close upload__item-close"
+      class="btn btn--close upload-item__close"
       @click="deleteMessage(filesList, index)">
       <svg xmlns="http://www.w3.org/2000/svg"
            class="btn__icon">
