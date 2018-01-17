@@ -1,21 +1,34 @@
 .download-panel {
+  box-sizing: border-box;
   width: 100%;
-  max-height: 100vh;
-  padding: $spaceBase;
   position: fixed;
   bottom: 0;
   right: 0;
   background-color: $lightBackground;
-  text-align: center;
-  overflow-y: auto;
+  transition: height .24s cubic-bezier(.69,.19,.71,.87);
+
+  &--minimized {
+    .download-panel {
+      &__content {
+        padding: $spaceBase;
+        text-align: center;
+      }
+      &__title {
+        margin-bottom: $spaceS2;
+      }
+    }
+  }
 
   &--maximized {
-    display: flex;
-    padding: 0;
-    flex-direction: column;
-    text-align: left;
-
     .download-panel {
+      &__content {
+        display: flex;
+        height: 100vh;
+        padding: 0;
+        flex-direction: column;
+        text-align: left;
+        overflow-y: auto;
+      }
       &__header {
         display: flex;
         flex-grow: 0;
@@ -24,8 +37,17 @@
         align-items: center;
       }
 
+      &__title {
+        @extend %title;
+        @extend %title--second;
+
+        display: inline-block;
+        margin: 0;
+      }
+
       &__body {
         flex-grow: 1;
+        padding: 0 $spaceBase;
         overflow-y: auto;
       }
 
@@ -45,23 +67,6 @@
     background-color: fade-out($darkestBackground, .15);
   }
 
-  &__header {
-    padding-bottom: $spaceS2
-  }
-
-  &__title {
-    @extend %title;
-    @extend %title--second;
-
-    display: inline-block;
-    margin: 0;
-  }
-
-  &__body {
-    padding: 0 $spaceBase;
-    text-align: left;
-  }
-
   &__button {
     margin: 0 $spaceS2;
 
@@ -75,21 +80,72 @@
   }
 
   @media screen and (min-width: $bpS) {
-    max-width: 30rem;
+    width: 30rem;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    &--minimized {
+      .download-panel {
+        &__content {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &__title {
+          margin-bottom: 0;
+        }
+      }
+    }
 
     &--maximized {
-      flex-direction: column;
-      justify-content: normal;
-      align-items: normal;
+      .download-panel {
+        &__content {
+          flex-direction: column;
+          justify-content: normal;
+          align-items: normal;
+        }
+      }
     }
+  }
+}
 
-    &__header {
-      padding-bottom: 0;
-    }
+//transitions
+
+.download-panel-overlay {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    transition: opacity .16s ease-out;
+  }
+
+  &-enter-to,
+  &-leave {
+    opacity: 1;
+  }
+
+  &-leave-active {
+    transition: opacity .16s ease-in;
+  }
+}
+
+.v {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+
+  &-enter-active {
+    transition: opacity .16s ease-out;
+  }
+
+  &-enter-to,
+  &-leave {
+    opacity: 1;
+  }
+
+  &-leave-active {
+    transition: opacity .16s ease-in;
   }
 }
