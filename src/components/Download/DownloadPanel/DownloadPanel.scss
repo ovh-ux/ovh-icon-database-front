@@ -4,15 +4,15 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  background-color: $lightBackground;
-  transition: height .24s cubic-bezier(.69,.19,.71,.87);
+  overflow: hidden;
+  //transition: all .24s cubic-bezier(.69,.19,.71,.87);
 
   &--minimized {
+    padding: $spaceBase;
+    background-color: $lightBackground;
+    text-align: center;
+
     .download-panel {
-      &__content {
-        padding: $spaceBase;
-        text-align: center;
-      }
       &__title {
         margin-bottom: $spaceS2;
       }
@@ -20,15 +20,15 @@
   }
 
   &--maximized {
+    height: 100vh;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    background-color: $lightBackground;
+    text-align: left;
+    overflow-y: auto;
+
     .download-panel {
-      &__content {
-        display: flex;
-        height: 100vh;
-        padding: 0;
-        flex-direction: column;
-        text-align: left;
-        overflow-y: auto;
-      }
       &__header {
         display: flex;
         flex-grow: 0;
@@ -80,16 +80,17 @@
   }
 
   @media screen and (min-width: $bpS) {
-    width: 30rem;
+    width: 60%;
+    min-width: 30rem;
+    max-width: 37.5rem;
 
     &--minimized {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
       .download-panel {
-        &__content {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-        }
         &__title {
           margin-bottom: 0;
         }
@@ -97,13 +98,9 @@
     }
 
     &--maximized {
-      .download-panel {
-        &__content {
-          flex-direction: column;
-          justify-content: normal;
-          align-items: normal;
-        }
-      }
+      flex-direction: column;
+      justify-content: normal;
+      align-items: normal;
     }
   }
 }
@@ -130,22 +127,22 @@
   }
 }
 
-.v {
+.download-panel {
   &-enter,
   &-leave-to {
-    opacity: 0;
+    transform: translateY(100%);
   }
 
   &-enter-active {
-    transition: opacity .16s ease-out;
+    transition: transform .32s cubic-bezier(.69,.19,.71,.87);
   }
 
   &-enter-to,
   &-leave {
-    opacity: 1;
+    transform: translateY(0);
   }
 
   &-leave-active {
-    transition: opacity .16s ease-in;
+    transition: transform .32s cubic-bezier(.69,.19,.71,.87);
   }
 }
