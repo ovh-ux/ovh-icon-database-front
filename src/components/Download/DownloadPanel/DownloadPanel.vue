@@ -2,7 +2,7 @@
   <div>
     <div v-if="modalState" class="download-panel__overlay"></div>
 
-    <div class="download-panel">
+    <div class="download-panel" :class="{'download-panel--maximized': modalState}">
       <div v-if="!modalState" class="download-panel__header">
         {{ selectedIcons.length }} icon(s) selected
       </div>
@@ -17,9 +17,7 @@
               <use href="#leftarrow_16px" />
           </svg>
         </button>
-        <h2 class="download-panel__title">
-          SVGs source code
-        </h2>
+        <h2 class="download-panel__title">SVGs source code</h2>
       </div>
 
       <div v-if="modalState" class="download-panel__body">

@@ -31,23 +31,25 @@
 @include code-theme(code);
 
 /* Code blocks */
-// pre[class*="language-"] {
-// 	padding: 1em;
-// 	margin: .5em 0;
-// 	overflow: auto;
-// }
-//
-// :not(pre) > code[class*="language-"],
-// pre[class*="language-"] {
-// 	background: #f5f2f0;
-// }
+pre[class*="language-"] {
+  padding: $spaceS2;
+  margin: 0;
+  border: solid 1px $lightBorder;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: $lightestBackground;
+}
 
 /* Inline code */
-// :not(pre) > code[class*="language-"] {
-// 	padding: .1em;
-// 	border-radius: .3em;
-// 	white-space: normal;
-// }
+:not(pre) > code[class*="language-"] {
+	padding: $spaceS3;
+	border-radius: 3px;
+	white-space: normal;
+}
 
 .token {
   &.comment,
@@ -62,7 +64,7 @@
   }
 
   &.namespace {
-    opacity: .7;
+    opacity: .85;
   }
 
   &.property,
@@ -98,7 +100,7 @@
   }
 
   &.function {
-    color: $errorMedium;
+    color: $errorDark;
   }
 
   &.regex,

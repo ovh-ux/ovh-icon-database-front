@@ -1,19 +1,22 @@
 .download-get-code {
-  padding: $spaceBase 0;
+  margin-bottom: $spaceL2;
 
-  &__name {
-    @extend %title;
-    @extend %title--minor;
-
-    margin: 0 0 $spaceS2 0;
+  &:last-child {
+    margin-bottom: 0;
   }
 
-  &__code {
-    padding: $spaceS2;
-    margin: 0;
-    border: solid 1px $lightBorder;
-    background-color: $lightestBackground;
-    border-radius: 3px;
-    overflow-x: auto;
+  &__visual {
+      display: inline-block;
+      width: $sizeIconBase;
+      height: $sizeIconBase;
+      margin-right: $spaceS2;
+      color: transparent;
+  }
+
+  &__name {
+    @extend %text;
+    @extend %text--base;
+
+    margin: 0 0 $spaceS2 0;
   }
 }
