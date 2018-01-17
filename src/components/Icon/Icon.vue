@@ -5,7 +5,7 @@
              class="icon"
              @click="selectIcon(icon)"
              v-bind:class="{ 'icon--selected': icon.selected }">
-             <img class="icon__visual" :src="icon.url" :alt="icon.name" />
+             <span class="icon__visual" v-html="icon.raw"></span>
              <span class="icon__name">{{icon.name}}</span>
           </button>
       </li>
@@ -17,7 +17,9 @@ import { mapActions } from 'vuex'
 
 export default {
     name: 'Icon',
-    methods: mapActions(['selectIcon']),
+    methods: mapActions({
+      'selectIcon': 'icons/select'
+    }),
     props: {
         icon: {
             type: Object
@@ -28,6 +30,14 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+  .icon__visual svg {
+
+    width: 32px;
+    height: 32px;
+  }
+</style>
 
 <style lang="scss" scoped>
     @import './Icon.scss';

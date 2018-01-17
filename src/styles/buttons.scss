@@ -3,10 +3,12 @@ button {
 }
 
 .btn {
+  display: inline-block;
   position: relative;
   z-index: 1;
   font-weight: $fwMedium;
   border-radius: 3px;
+  color: $textColor;
   cursor: pointer;
 
   &:focus {
@@ -17,6 +19,7 @@ button {
     padding: $spaceS2 $spaceBase;
     border: solid 1px $brandPrimary;
     background-color: $brandPrimary;
+    text-decoration: none;
     transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
     &:not(.btn--disabled) {
@@ -33,6 +36,7 @@ button {
   &--actions {
     border: solid 1px $lightBorder;
     background-color: transparent;
+    text-decoration: none;
     transition: all .16s cubic-bezier(.69,.19,.71,.87);
 
     &:not(.btn--disabled) {
@@ -88,18 +92,20 @@ button {
 %link {
   @extend %text--link;
 
+  display: inline-block;
   position: relative;
   text-decoration: none;
   transition: all 0.2s ease-in;
 
-  &::before {
+  &::before,
+  &__label::before {
     content: "";
     display: block;
     width: 100%;
     height: 1px;
     position: absolute;
     left: 0;
-    bottom: $spaceS3;
+    bottom: 0;
     background-color: $linkColor;
     transform-origin: center;
     transform: scaleX(1);
@@ -111,9 +117,31 @@ button {
   &:focus {
     color: mix($linkColor, $textColor, 60%);
 
-    &::before {
+    &::before,
+    .link__label::before {
       transform: scaleX(.3);
       background-color: mix($linkColor, $textColor, 60%);
     }
+  }
+
+  &--back {
+    &::before {
+      content: none;
+      display: none;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: $sizeIconS2;
+    height: $sizeIconS2;
+    vertical-align: middle;
+    margin-right: $spaceS2;
+  }
+
+  &__label {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
   }
 }

@@ -11,19 +11,18 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
+
 import AddButton from '@/components/AddButton/AddButton'
 import Icon from '@/components/Icon/Icon'
 
 export default {
     name: 'IconList',
-    computed: {
-        total() {
-            return this.$store.state.moduleIcons.icons.length;
-        },
-        filteredIcons() {
-          return this.$store.getters.filteredIcons;
-        }
-    },
+    computed: mapGetters({
+      'total': 'icons/count',
+      'filteredIcons': 'icons/filtered'
+    }),
     components: {
         AddButton,
         Icon

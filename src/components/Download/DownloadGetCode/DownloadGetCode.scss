@@ -1,0 +1,19 @@
+.download-get-code {
+  padding: $spaceBase 0;
+
+  &__name {
+    @extend %title;
+    @extend %title--minor;
+
+    margin: 0 0 $spaceS2 0;
+  }
+
+  &__code {
+    padding: $spaceS2;
+    margin: 0;
+    border: solid 1px $lightBorder;
+    background-color: $lightestBackground;
+    border-radius: 3px;
+    overflow-x: auto;
+  }
+}

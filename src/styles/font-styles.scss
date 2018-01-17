@@ -44,3 +44,10 @@
     letter-spacing: $lsS1;
   }
 }
+
+%code {
+  font-family: $fontsMonospace;
+  font-size: $fsS1;
+  letter-spacing: $lsBase;
+  line-height: $lhBase;
+}

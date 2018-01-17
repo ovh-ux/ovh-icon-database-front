@@ -1,29 +1,34 @@
 <template>
     <section>
         <page-title :pagename="'OVH Icon Database'"></page-title>
-        <icon-filter></icon-filter>
-        <transition name="icon-loading" mode="out-in">
-          <icon-loading v-if="loading"></icon-loading>
-          <icon-list v-else></icon-list>
-        </transition>
-        <!--<download-panel v-if="hasSelectedIcon"></download-panel>-->
+        <icon-error v-if="error"></icon-error>
+        <div v-else>
+            <icon-filter></icon-filter>
+            <transition name="icon-loading" mode="out-in">
+                <icon-loading v-if="loading"></icon-loading>
+                <icon-list v-else></icon-list>
+            </transition>
+            <download-panel v-if="hasSelectedIcon"></download-panel>
+        </div>
     </section>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex';
 
-import PageTitle from '@/components/PageTitle/PageTitle'
-import IconFilter from '@/components/Icon/IconFilter/IconFilter'
-import IconLoading from '@/components/Icon/IconLoading/IconLoading'
-import IconList from '@/components/Icon/IconList/IconList'
-import DownloadPanel from '@/components/DownloadPanel/DownloadPanel'
+import PageTitle from '@/components/PageTitle/PageTitle';
+import IconFilter from '@/components/Icon/IconFilter/IconFilter';
+import IconLoading from '@/components/Icon/IconLoading/IconLoading';
+import IconList from '@/components/Icon/IconList/IconList';
+import DownloadPanel from '@/components/Download/DownloadPanel/DownloadPanel';
+import IconError from '@/components/Icon/IconError/IconError';
 
 export default {
     name: 'HomePage',
     data: () => {
         return {
-            loading: true
+            loading: true,
+            error: false
         };
     },
     created: function () {
@@ -32,20 +37,21 @@ export default {
             this.loading = false;
         });
     },
-    computed: mapGetters([
-      'hasSelectedIcon'
-    ]),
-    methods: mapActions([
-        'fetchIcons'
-    ]),
+    computed: mapGetters({
+      'hasSelectedIcon': 'icons/hasSelected',
+    }),
+    methods: mapActions({
+      'fetchIcons': 'icons/fetch'
+    }),
     components: {
       PageTitle,
       IconFilter,
       IconLoading,
       IconList,
-      DownloadPanel
+      DownloadPanel,
+      IconError,
     }
-}
+};
 </script>
 
 <style lang="scss" scoped>
