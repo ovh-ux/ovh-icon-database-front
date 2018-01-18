@@ -11,8 +11,12 @@ module.exports = {
     browser
       .url(devServer)
       .waitForElementVisible('#app', 5000)
+      .assert.elementPresent('.header')
       .assert.elementPresent('.page-title')
-      .assert.containsText('h2', 'OVH Icon Database')
+      .assert.containsText('.page-title', 'OVH Icon Database')
+      .assert.elementNotPresent('.icon-filter')
+      .assert.elementNotPresent('.icon-list')
+      .assert.elementNotPresent('.download-panel')
       .end()
   }
 }
