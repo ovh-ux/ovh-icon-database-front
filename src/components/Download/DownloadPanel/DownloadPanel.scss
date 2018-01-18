@@ -1,14 +1,61 @@
 .download-panel {
   box-sizing: border-box;
   width: 100%;
-  max-height: 100vh;
-  padding: $spaceBase;
   position: fixed;
   bottom: 0;
   right: 0;
-  background-color: $lightBackground;
-  text-align: center;
-  overflow-y: auto;
+  overflow: hidden;
+
+  &--minimized {
+    padding: $spaceBase;
+    background-color: $lightBackground;
+    text-align: center;
+
+    .download-panel {
+      &__title {
+        margin-bottom: $spaceS2;
+      }
+    }
+  }
+
+  &--maximized {
+    height: 100vh;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    background-color: $lightBackground;
+    text-align: left;
+    overflow-y: auto;
+
+    .download-panel {
+      &__header {
+        display: flex;
+        flex-grow: 0;
+        padding: $spaceBase;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &__title {
+        @extend %title;
+        @extend %title--second;
+
+        display: inline-block;
+        margin: 0;
+      }
+
+      &__body {
+        flex-grow: 1;
+        padding: 0 $spaceBase;
+        overflow-y: auto;
+      }
+
+      &__footer {
+        padding: $spaceBase;
+        flex-grow: 0;
+      }
+    }
+  }
 
   &__overlay {
     width: 100%;
@@ -17,24 +64,6 @@
     top: 0;
     left: 0;
     background-color: fade-out($darkestBackground, .15);
-  }
-
-  &__header {
-    display: block;
-    text-align: left;
-  }
-
-  &__title {
-    @extend %title;
-    @extend %title--second;
-
-    display: inline-block;
-    margin: 0;
-  }
-
-  &__body {
-    border-top: solid 1px $lightBorder;
-    text-align: left;
   }
 
   &__button {
@@ -50,15 +79,27 @@
   }
 
   @media screen and (min-width: $bpS) {
-    max-width: 30rem;
+    width: 60%;
+    min-width: 30rem;
+    max-width: 37.5rem;
 
-    /*display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    &--minimized {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
 
-    &__title {
-      margin-bottom: 0;
-    }*/
+      .download-panel {
+        &__title {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--maximized {
+      flex-direction: column;
+      justify-content: normal;
+      align-items: normal;
+    }
   }
 }

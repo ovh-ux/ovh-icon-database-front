@@ -1,6 +1,9 @@
 <template>
   <div class="download-get-code">
-    <h3 class="download-get-code__name">{{ icon.name }}</h3>
+    <h3 class="download-get-code__name">
+      <span class="download-get-code__visual" v-html="icon.raw"></span>
+      {{ icon.name }}
+    </h3>
     <pre class="download-get-code__code language-markup"><!--remove indentation
     --><code v-html="getHighlightedSvg(icon.raw)"></code><!--remove indentation
     --></pre>
@@ -11,8 +14,6 @@
 import { mapGetters, mapActions } from 'vuex'
 import Prism from 'prismjs'
 import beautify from 'xml-beautifier'
-
-import 'prismjs/themes/prism.css'
 
 export default {
   name: 'DownloadGetCode',
