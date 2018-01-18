@@ -3,8 +3,6 @@ import Zip from 'jszip';
 
 import { api } from '../../utils/request';
 
-const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`;
-
 export default {
 
   select({ commit }, icon) {
@@ -19,7 +17,6 @@ export default {
     return api.get('/api/svg/list').then(response => {
       let icons = response.data.data;
       icons.forEach(icon => {
-        icon.url = `${baseUrl}/${icon.name}`;
         icon.name = icon.name.replace('.svg', '');
 
         let div = document.createElement('div');
