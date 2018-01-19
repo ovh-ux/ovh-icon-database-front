@@ -5,9 +5,9 @@
 
   <testsuite name="HomePage"
     errors="0" failures="0" hostname="" id="" package="HomePage" skipped="0"
-    tests="1" time="15.32" timestamp="Thu, 18 Jan 2018 16:45:59 GMT">
+    tests="1" time="15.04" timestamp="Fri, 19 Jan 2018 12:57:56 GMT">
   
-    <testcase name="HomePage e2e tests" classname="HomePage" time="15.32" assertions="7">
+    <testcase name="HomePage loading" classname="HomePage" time="15.04" assertions="7">
 
     
 

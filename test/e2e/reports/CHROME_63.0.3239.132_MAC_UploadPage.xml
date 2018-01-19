@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="2">
 
   <testsuite name="UploadPage"
     errors="0" failures="0" hostname="" id="" package="UploadPage" skipped="0"
-    tests="1" time="1.501" timestamp="Thu, 18 Jan 2018 16:46:15 GMT">
+    tests="2" time="10.67" timestamp="Fri, 19 Jan 2018 12:58:12 GMT">
   
-    <testcase name="UploadPage e2e tests" classname="UploadPage" time="1.501" assertions="18">
+    <testcase name="UploadPage loading" classname="UploadPage" time="5.516" assertions="18">
 
     
 
@@ -42,6 +42,11 @@
     
 
     
+
+    
+    </testcase>
+  
+    <testcase name="Upload an icon" classname="UploadPage" time="5.155" assertions="1">
 
     
     </testcase>

@@ -1,102 +1,148 @@
-17:45:59.232 INFO - Launching a standalone Selenium Server
-17:45:59.283 INFO - Java: Oracle Corporation 25.152-b16
-17:45:59.283 INFO - OS: Mac OS X 10.12.6 x86_64
-17:45:59.301 INFO - v2.53.1, with Core v2.53.1. Built from revision a36b8b1
-17:45:59.383 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+13:57:55.973 INFO - Launching a standalone Selenium Server
+13:57:56.008 INFO - Java: Oracle Corporation 25.152-b16
+13:57:56.009 INFO - OS: Mac OS X 10.12.6 x86_64
+13:57:56.027 INFO - v2.53.1, with Core v2.53.1. Built from revision a36b8b1
+13:57:56.089 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
 registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
-17:45:59.384 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+13:57:56.089 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
 registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
-17:45:59.384 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-17:45:59.384 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-17:45:59.386 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
-17:45:59.386 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
-17:45:59.474 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
-17:45:59.474 INFO - Selenium Server is up and running
-17:45:59.884 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Home Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-17:45:59.899 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Home Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.34.522932 (4140ab217e1ca1bec0c4b4d1b148f3361eb3a03e) on port 12234
+13:57:56.090 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+13:57:56.090 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+13:57:56.091 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+13:57:56.091 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+13:57:56.170 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+13:57:56.170 INFO - Selenium Server is up and running
+13:57:56.490 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Home Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+13:57:56.502 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Home Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.34.522932 (4140ab217e1ca1bec0c4b4d1b148f3361eb3a03e) on port 1923
 Only local connections are allowed.
-17:46:01.582 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Home Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-17:46:01.594 INFO - Executing: [get: http://localhost:8080])
-17:46:14.668 INFO - Done: [get: http://localhost:8080]
-17:46:14.677 INFO - Executing: [find elements: By.cssSelector: #app])
-17:46:14.706 INFO - Done: [find elements: By.cssSelector: #app]
-17:46:14.716 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (a81c02360bdbb45f0282513db1efc32e)] -> css selector: #app]])
-17:46:14.737 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (a81c02360bdbb45f0282513db1efc32e)] -> css selector: #app]]
-17:46:14.746 INFO - Executing: [find elements: By.cssSelector: .header])
-17:46:14.760 INFO - Done: [find elements: By.cssSelector: .header]
-17:46:14.769 INFO - Executing: [find elements: By.cssSelector: .page-title])
-17:46:14.788 INFO - Done: [find elements: By.cssSelector: .page-title]
-17:46:14.802 INFO - Executing: [find element: By.cssSelector: .page-title])
-17:46:14.820 INFO - Done: [find element: By.cssSelector: .page-title]
-17:46:14.824 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (a81c02360bdbb45f0282513db1efc32e)] -> css selector: .page-title]])
-17:46:14.841 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (a81c02360bdbb45f0282513db1efc32e)] -> css selector: .page-title]]
-17:46:14.849 INFO - Executing: [find elements: By.cssSelector: .icon-filter])
-17:46:14.867 INFO - Done: [find elements: By.cssSelector: .icon-filter]
-17:46:14.872 INFO - Executing: [find elements: By.cssSelector: .icon-list])
-17:46:14.885 INFO - Done: [find elements: By.cssSelector: .icon-list]
-17:46:14.891 INFO - Executing: [find elements: By.cssSelector: .download-panel])
-17:46:14.905 INFO - Done: [find elements: By.cssSelector: .download-panel]
-17:46:14.913 INFO - Executing: [delete session: 1bf8c65a-ca22-4225-9e15-dc9d0a15cb9a])
-17:46:14.986 INFO - Done: [delete session: 1bf8c65a-ca22-4225-9e15-dc9d0a15cb9a]
-17:46:15.057 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-17:46:15.059 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.34.522932 (4140ab217e1ca1bec0c4b4d1b148f3361eb3a03e) on port 40109
+13:57:57.425 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Home Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+13:57:57.436 INFO - Executing: [get: http://localhost:8081])
+13:58:10.999 INFO - Done: [get: http://localhost:8081]
+13:58:11.008 INFO - Executing: [find elements: By.cssSelector: #app])
+13:58:11.040 INFO - Done: [find elements: By.cssSelector: #app]
+13:58:11.048 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (af1f78836e960141206ece656f52dccc)] -> css selector: #app]])
+13:58:11.072 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (af1f78836e960141206ece656f52dccc)] -> css selector: #app]]
+13:58:11.081 INFO - Executing: [find elements: By.cssSelector: .header])
+13:58:11.096 INFO - Done: [find elements: By.cssSelector: .header]
+13:58:11.104 INFO - Executing: [find elements: By.cssSelector: .page-title])
+13:58:11.121 INFO - Done: [find elements: By.cssSelector: .page-title]
+13:58:11.133 INFO - Executing: [find element: By.cssSelector: .page-title])
+13:58:11.154 INFO - Done: [find element: By.cssSelector: .page-title]
+13:58:11.157 INFO - Executing: [get text: 2 [[ChromeDriver: chrome on MAC (af1f78836e960141206ece656f52dccc)] -> css selector: .page-title]])
+13:58:11.174 INFO - Done: [get text: 2 [[ChromeDriver: chrome on MAC (af1f78836e960141206ece656f52dccc)] -> css selector: .page-title]]
+13:58:11.180 INFO - Executing: [find elements: By.cssSelector: .icon-filter])
+13:58:11.194 INFO - Done: [find elements: By.cssSelector: .icon-filter]
+13:58:11.200 INFO - Executing: [find elements: By.cssSelector: .icon-list])
+13:58:11.218 INFO - Done: [find elements: By.cssSelector: .icon-list]
+13:58:11.223 INFO - Executing: [find elements: By.cssSelector: .download-panel])
+13:58:11.237 INFO - Done: [find elements: By.cssSelector: .download-panel]
+13:58:11.247 INFO - Executing: [delete session: af478029-dbb5-4dc6-ae99-7e6aa71dcf83])
+13:58:11.350 INFO - Done: [delete session: af478029-dbb5-4dc6-ae99-7e6aa71dcf83]
+13:58:11.403 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Icon Filter, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+13:58:11.403 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Icon Filter, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.34.522932 (4140ab217e1ca1bec0c4b4d1b148f3361eb3a03e) on port 43106
 Only local connections are allowed.
-17:46:15.554 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-17:46:15.560 INFO - Executing: [get: http://localhost:8080/#/upload])
-17:46:15.894 INFO - Done: [get: http://localhost:8080/#/upload]
-17:46:15.903 INFO - Executing: [find elements: By.cssSelector: #app])
-17:46:15.919 INFO - Done: [find elements: By.cssSelector: #app]
-17:46:15.924 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: #app]])
-17:46:15.938 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: #app]]
-17:46:15.944 INFO - Executing: [find elements: By.cssSelector: .header])
-17:46:15.958 INFO - Done: [find elements: By.cssSelector: .header]
-17:46:15.966 INFO - Executing: [find elements: By.cssSelector: .upload])
-17:46:15.984 INFO - Done: [find elements: By.cssSelector: .upload]
-17:46:15.993 INFO - Executing: [find elements: By.cssSelector: .upload__back-link])
-17:46:16.011 INFO - Done: [find elements: By.cssSelector: .upload__back-link]
-17:46:16.019 INFO - Executing: [find element: By.cssSelector: .upload__back-link])
-17:46:16.032 INFO - Done: [find element: By.cssSelector: .upload__back-link]
-17:46:16.035 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload__back-link], href])
-17:46:16.044 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload__back-link], href]
-17:46:16.048 INFO - Executing: [find element: By.cssSelector: .upload__back-link])
-17:46:16.056 INFO - Done: [find element: By.cssSelector: .upload__back-link]
-17:46:16.060 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload__back-link]])
-17:46:16.080 INFO - Done: [get text: 3 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload__back-link]]
-17:46:16.084 INFO - Executing: [find elements: By.cssSelector: .page-title])
-17:46:16.099 INFO - Done: [find elements: By.cssSelector: .page-title]
-17:46:16.104 INFO - Executing: [find element: By.cssSelector: .page-title])
-17:46:16.121 INFO - Done: [find element: By.cssSelector: .page-title]
-17:46:16.126 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .page-title]])
-17:46:16.142 INFO - Done: [get text: 4 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .page-title]]
-17:46:16.148 INFO - Executing: [find elements: By.cssSelector: .upload__file-uploader])
-17:46:16.161 INFO - Done: [find elements: By.cssSelector: .upload__file-uploader]
-17:46:16.167 INFO - Executing: [find elements: By.cssSelector: .upload-area])
-17:46:16.183 INFO - Done: [find elements: By.cssSelector: .upload-area]
-17:46:16.188 INFO - Executing: [find element: By.cssSelector: .upload-area])
-17:46:16.201 INFO - Done: [find element: By.cssSelector: .upload-area]
-17:46:16.208 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload-area], class])
-17:46:16.215 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload-area], class]
-17:46:16.220 INFO - Executing: [find elements: By.cssSelector: .upload-area__content])
-17:46:16.239 INFO - Done: [find elements: By.cssSelector: .upload-area__content]
-17:46:16.259 INFO - Executing: [find element: By.cssSelector: .upload-area__content])
-17:46:16.278 INFO - Done: [find element: By.cssSelector: .upload-area__content]
-17:46:16.282 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload-area__content], class])
-17:46:16.290 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload-area__content], class]
-17:46:16.294 INFO - Executing: [find elements: By.cssSelector: .upload-area__message])
-17:46:16.308 INFO - Done: [find elements: By.cssSelector: .upload-area__message]
-17:46:16.314 INFO - Executing: [find elements: By.cssSelector: .upload-area__button])
-17:46:16.327 INFO - Done: [find elements: By.cssSelector: .upload-area__button]
-17:46:16.332 INFO - Executing: [find element: By.cssSelector: .upload-area__button])
-17:46:16.348 INFO - Done: [find element: By.cssSelector: .upload-area__button]
-17:46:16.350 INFO - Executing: [get text: 9 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload-area__button]])
-17:46:16.371 INFO - Done: [get text: 9 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload-area__button]]
-17:46:16.375 INFO - Executing: [find elements: By.cssSelector: .upload-list])
-17:46:16.392 INFO - Done: [find elements: By.cssSelector: .upload-list]
-17:46:16.396 INFO - Executing: [find elements: By.cssSelector: .upload__back-link])
-17:46:16.404 INFO - Done: [find elements: By.cssSelector: .upload__back-link]
-17:46:16.408 INFO - Executing: [tag name: 3 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload__back-link]])
-17:46:16.416 INFO - Done: [tag name: 3 [[ChromeDriver: chrome on MAC (c4d585cc8cea24171d82707fe046724f)] -> css selector: .upload__back-link]]
-17:46:16.421 INFO - Executing: [delete session: 21a1cbb7-3e27-422f-9679-b285ee3191a0])
-17:46:16.537 INFO - Done: [delete session: 21a1cbb7-3e27-422f-9679-b285ee3191a0]
+13:58:11.888 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Icon Filter, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+13:58:11.893 INFO - Executing: [get: http://localhost:8081])
+13:58:12.174 INFO - Done: [get: http://localhost:8081]
+13:58:12.180 INFO - Executing: [find elements: By.cssSelector: #app])
+13:58:12.199 INFO - Done: [find elements: By.cssSelector: #app]
+13:58:12.204 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (42d7c329ea35dcc97c925863d919ff2b)] -> css selector: #app]])
+13:58:12.219 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (42d7c329ea35dcc97c925863d919ff2b)] -> css selector: #app]]
+13:58:12.225 INFO - Executing: [find elements: By.cssSelector: .icons-filter__content])
+13:58:12.240 INFO - Done: [find elements: By.cssSelector: .icons-filter__content]
+13:58:12.249 INFO - Executing: [find elements: By.cssSelector: .icons-filter__search])
+13:58:12.268 INFO - Done: [find elements: By.cssSelector: .icons-filter__search]
+13:58:12.276 INFO - Executing: [find elements: By.cssSelector: .icons-filter__search-field])
+13:58:12.294 INFO - Done: [find elements: By.cssSelector: .icons-filter__search-field]
+13:58:12.299 INFO - Executing: [find elements: By.cssSelector: .icons-filter__search-icon])
+13:58:12.313 INFO - Done: [find elements: By.cssSelector: .icons-filter__search-icon]
+13:58:12.318 INFO - Executing: [find elements: By.cssSelector: .icons-filter__search-field])
+13:58:12.331 INFO - Done: [find elements: By.cssSelector: .icons-filter__search-field]
+13:58:12.336 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (42d7c329ea35dcc97c925863d919ff2b)] -> css selector: .icons-filter__search-field], placeholder])
+13:58:12.345 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (42d7c329ea35dcc97c925863d919ff2b)] -> css selector: .icons-filter__search-field], placeholder]
+13:58:12.350 INFO - Executing: [find elements: By.cssSelector: .icons-filter__search-field])
+13:58:12.359 INFO - Done: [find elements: By.cssSelector: .icons-filter__search-field]
+13:58:12.364 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (42d7c329ea35dcc97c925863d919ff2b)] -> css selector: .icons-filter__search-field], value])
+13:58:12.374 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (42d7c329ea35dcc97c925863d919ff2b)] -> css selector: .icons-filter__search-field], value]
+13:58:12.379 INFO - Executing: [delete session: 9252c778-5155-4b33-bc3a-e6a8e5de3fea])
+13:58:12.472 INFO - Done: [delete session: 9252c778-5155-4b33-bc3a-e6a8e5de3fea]
+13:58:12.530 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+13:58:12.531 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.34.522932 (4140ab217e1ca1bec0c4b4d1b148f3361eb3a03e) on port 34055
+Only local connections are allowed.
+13:58:13.046 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+13:58:13.051 INFO - Executing: [get: http://localhost:8081/#/upload])
+13:58:13.367 INFO - Done: [get: http://localhost:8081/#/upload]
+13:58:13.371 INFO - Executing: [find elements: By.cssSelector: #app])
+13:58:13.384 INFO - Done: [find elements: By.cssSelector: #app]
+13:58:13.387 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: #app]])
+13:58:13.401 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: #app]]
+13:58:17.545 INFO - Executing: [find elements: By.cssSelector: .header])
+13:58:17.558 INFO - Done: [find elements: By.cssSelector: .header]
+13:58:17.562 INFO - Executing: [find elements: By.cssSelector: .upload])
+13:58:17.575 INFO - Done: [find elements: By.cssSelector: .upload]
+13:58:17.579 INFO - Executing: [find elements: By.cssSelector: .upload__back-link])
+13:58:17.594 INFO - Done: [find elements: By.cssSelector: .upload__back-link]
+13:58:17.599 INFO - Executing: [find element: By.cssSelector: .upload__back-link])
+13:58:17.612 INFO - Done: [find element: By.cssSelector: .upload__back-link]
+13:58:17.615 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload__back-link], href])
+13:58:17.623 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload__back-link], href]
+13:58:17.627 INFO - Executing: [find element: By.cssSelector: .upload__back-link])
+13:58:17.637 INFO - Done: [find element: By.cssSelector: .upload__back-link]
+13:58:17.639 INFO - Executing: [get text: 3 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload__back-link]])
+13:58:17.656 INFO - Done: [get text: 3 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload__back-link]]
+13:58:17.659 INFO - Executing: [find elements: By.cssSelector: .page-title])
+13:58:17.673 INFO - Done: [find elements: By.cssSelector: .page-title]
+13:58:17.677 INFO - Executing: [find element: By.cssSelector: .page-title])
+13:58:17.694 INFO - Done: [find element: By.cssSelector: .page-title]
+13:58:17.697 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .page-title]])
+13:58:17.711 INFO - Done: [get text: 4 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .page-title]]
+13:58:17.717 INFO - Executing: [find elements: By.cssSelector: .upload__file-uploader])
+13:58:17.731 INFO - Done: [find elements: By.cssSelector: .upload__file-uploader]
+13:58:17.735 INFO - Executing: [find elements: By.cssSelector: .upload-area])
+13:58:17.746 INFO - Done: [find elements: By.cssSelector: .upload-area]
+13:58:17.752 INFO - Executing: [find element: By.cssSelector: .upload-area])
+13:58:17.766 INFO - Done: [find element: By.cssSelector: .upload-area]
+13:58:17.770 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload-area], class])
+13:58:17.776 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload-area], class]
+13:58:17.781 INFO - Executing: [find elements: By.cssSelector: .upload-area__content])
+13:58:17.796 INFO - Done: [find elements: By.cssSelector: .upload-area__content]
+13:58:17.800 INFO - Executing: [find element: By.cssSelector: .upload-area__content])
+13:58:17.812 INFO - Done: [find element: By.cssSelector: .upload-area__content]
+13:58:17.815 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload-area__content], class])
+13:58:17.822 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload-area__content], class]
+13:58:17.827 INFO - Executing: [find elements: By.cssSelector: .upload-area__message])
+13:58:17.839 INFO - Done: [find elements: By.cssSelector: .upload-area__message]
+13:58:17.844 INFO - Executing: [find elements: By.cssSelector: .upload-area__button])
+13:58:17.859 INFO - Done: [find elements: By.cssSelector: .upload-area__button]
+13:58:17.865 INFO - Executing: [find element: By.cssSelector: .upload-area__button])
+13:58:17.881 INFO - Done: [find element: By.cssSelector: .upload-area__button]
+13:58:17.886 INFO - Executing: [get text: 9 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload-area__button]])
+13:58:17.901 INFO - Done: [get text: 9 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload-area__button]]
+13:58:17.904 INFO - Executing: [find elements: By.cssSelector: .upload-list])
+13:58:17.916 INFO - Done: [find elements: By.cssSelector: .upload-list]
+13:58:17.921 INFO - Executing: [find elements: By.cssSelector: .upload__back-link])
+13:58:17.930 INFO - Done: [find elements: By.cssSelector: .upload__back-link]
+13:58:17.932 INFO - Executing: [tag name: 3 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload__back-link]])
+13:58:17.938 INFO - Done: [tag name: 3 [[ChromeDriver: chrome on MAC (fb147d5532db9b45e8a6e12ad2779773)] -> css selector: .upload__back-link]]
+13:58:17.943 INFO - Executing: [delete session: 2b908e38-412b-42ff-91f2-bbe3d65166cf])
+13:58:18.037 INFO - Done: [delete session: 2b908e38-412b-42ff-91f2-bbe3d65166cf]
+13:58:18.042 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+13:58:18.043 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.34.522932 (4140ab217e1ca1bec0c4b4d1b148f3361eb3a03e) on port 28002
+Only local connections are allowed.
+13:58:18.524 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Upload Page, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+13:58:18.527 INFO - Executing: [get: http://localhost:8081/#/upload])
+13:58:18.834 INFO - Done: [get: http://localhost:8081/#/upload]
+13:58:18.837 INFO - Executing: [find elements: By.cssSelector: #app])
+13:58:18.851 INFO - Done: [find elements: By.cssSelector: #app]
+13:58:18.853 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (f15bf05854c01c6a8ca24969f1211cd9)] -> css selector: #app]])
+13:58:18.868 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (f15bf05854c01c6a8ca24969f1211cd9)] -> css selector: #app]]
+13:58:23.042 INFO - Executing: [find element: By.cssSelector: .upload-area__button])
+13:58:23.054 INFO - Done: [find element: By.cssSelector: .upload-area__button]
+13:58:23.057 INFO - Executing: [click: 1 [[ChromeDriver: chrome on MAC (f15bf05854c01c6a8ca24969f1211cd9)] -> css selector: .upload-area__button]])
+13:58:23.092 INFO - Done: [click: 1 [[ChromeDriver: chrome on MAC (f15bf05854c01c6a8ca24969f1211cd9)] -> css selector: .upload-area__button]]
+13:58:23.100 INFO - Executing: [delete session: 27560997-8ad6-4d5e-a049-25f13be6c30a])
+13:58:23.192 INFO - Done: [delete session: 27560997-8ad6-4d5e-a049-25f13be6c30a]
