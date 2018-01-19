@@ -3,7 +3,7 @@ dist: trusty
 language: node_js
 env: TRAVIS_CI=true
 addons:
-  firefox: stable
+  firefox: "latest"
   chrome: stable
 script:
   - npm run unit

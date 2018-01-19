@@ -12,7 +12,7 @@ module.exports = {
       .url(devServer + '/#/upload')
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('.page-title')
-      .assert.containsText('h2', 'UI KIT Icon Database')
+      .assert.containsText('h2', 'Upload Icons')
       .end()
   }
 }
