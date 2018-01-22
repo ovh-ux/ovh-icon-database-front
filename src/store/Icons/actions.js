@@ -18,6 +18,7 @@ export default {
       let icons = response.data.data;
       icons.forEach(icon => {
         icon.name = icon.name.replace('.svg', '');
+        icon.name = icon.name.replace('/\s/g', '');
 
         let div = document.createElement('div');
         div.innerHTML = icon.raw;
