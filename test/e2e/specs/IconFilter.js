@@ -19,6 +19,6 @@ module.exports = {
     browser.expect.element('.icons-filter__search-field').to.have.attribute('placeholder', 'Search icon');
     browser.expect.element('.icons-filter__search-field').to.have.value.that.equals('');
 
-    browser.end()
+    browser.end();
   }
-}
+};

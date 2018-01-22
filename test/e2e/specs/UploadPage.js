@@ -2,18 +2,19 @@
 // http://nightwatchjs.org/guide#usage
 
 module.exports = {
-  beforeEach: function (browser,done) {
+  before: function(browser) {
     const devServer = browser.globals.devServerURL
 
     browser
       .url(devServer + '/#/upload')
       .waitForElementVisible('#app', 5000);
-    setTimeout( () => {
-      done();
-    }, 5000);
   },
 
-  'UploadPage loading': function (browser) {
+  after: function(browser) {
+    browser.end();
+  },
+
+  'UploadPage Initial State': function (browser) {
     // automatically uses dev Server port from /config.index.js
     // default: http://localhost:8080
     // see nightwatch.conf.js
@@ -38,12 +39,10 @@ module.exports = {
       .assert.elementNotPresent('.upload-list');
 
     browser.expect.element('.upload__back-link').to.be.a('a');
-    browser.end()
   },
 
   'Upload an icon': function (browser) {
     browser
-      .click('.upload-area__button')
-      .end()
+      .click('.upload-area__button');
   }
-}
+};

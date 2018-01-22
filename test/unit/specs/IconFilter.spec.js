@@ -21,6 +21,4 @@ describe('IconFilter.vue', () => {
     expect(vm.$el.querySelector('.icons-filter__search-field').placeholder).to.equal("Search icon");
     // expect(vm.$el.querySelector('.icons-filter__search-icon')).not.to.be(undefined);
   });
-
-  it('Typing in search field should launch the search method');
 });
