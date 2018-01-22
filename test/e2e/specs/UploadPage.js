@@ -1,9 +1,11 @@
 // For authoring Nightwatch tests, see
 // http://nightwatchjs.org/guide#usage
 
+let devServer;
+
 module.exports = {
   before: function(browser) {
-    const devServer = browser.globals.devServerURL
+    devServer = browser.globals.devServerURL
 
     browser
       .url(devServer + '/#/upload')
@@ -18,7 +20,6 @@ module.exports = {
     // automatically uses dev Server port from /config.index.js
     // default: http://localhost:8080
     // see nightwatch.conf.js
-    const devServer = browser.globals.devServerURL
 
     browser
       .assert.elementPresent('.header')
@@ -43,6 +44,13 @@ module.exports = {
 
   'Upload an icon': function (browser) {
     browser
-      .click('.upload-area__button');
+    .assert.elementPresent('.upload')
+    .click('.upload-area__button');
+  },
+
+  'Back to home': function(browser) {
+    browser
+      .click('.upload__back-link')
+      .assert.urlEquals(devServer + '/#/');
   }
 };
