@@ -1,6 +1,6 @@
 {
   "name": "ovh-icon-database-front",
-  "version": "1.0.0",
+  "version": "1.0.0-rc",
   "description": "front end of ovh-icon-database",
   "author": "OVH",
   "private": false,
