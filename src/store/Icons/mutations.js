@@ -13,7 +13,7 @@ export default {
 
   [types.SELECT_ICON](state, icon) {
     var currentIconIdx = state.icons.findIndex((elm) => {
-      return elm.etag === icon.etag;
+      return (elm.etag + elm.lastModified) === (icon.etag + icon.lastModified);
     });
 
     Vue.set(
