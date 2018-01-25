@@ -20,7 +20,8 @@ button {
     border: solid 1px $brandPrimary;
     background-color: $brandPrimary;
     text-decoration: none;
-    transition: all .16s cubic-bezier(.69,.19,.71,.87);
+    transition: background-color .16s cubic-bezier(.69,.19,.71,.87),
+      border-color .16s cubic-bezier(.69,.19,.71,.87);
 
     &:not(.btn--disabled) {
       &:hover,
@@ -37,7 +38,8 @@ button {
     border: solid 1px $lightBorder;
     background-color: transparent;
     text-decoration: none;
-    transition: all .16s cubic-bezier(.69,.19,.71,.87);
+    transition: border-color .16s cubic-bezier(.69,.19,.71,.87),
+      background-color .16s cubic-bezier(.69,.19,.71,.87);
 
     &:not(.btn--disabled) {
       &:hover,
@@ -95,7 +97,7 @@ button {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  transition: all 0.2s ease-in;
+  transition: color 0.2s ease-in;
 
   &::before,
   &__label::before {

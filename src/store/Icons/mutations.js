@@ -11,14 +11,24 @@ export default {
     state.searchName = value;
   },
 
-  [types.SELECT_ICON](state, icon) {
-    var currentIconIdx = state.icons.findIndex((elm) => {
-      return elm.etag === icon.etag;
-    });
+  [types.TOGGLE_SELECT_ICON](state, icon) {
+    Vue.set(icon, 'selected', !icon.selected);
+  },
 
-    Vue.set(
-      state.icons[currentIconIdx], 'selected',
-      !state.icons[currentIconIdx].selected
-    );
+  [types.SELECT_ICON](state, icon) {
+    Vue.set(icon, 'selected', true);
+  },
+
+  [types.SELECT_ALL_ICON](state) {
+    state.icons.forEach(icon => {
+      Vue.set(icon, 'selected', true);
+    });
+  },
+
+  [types.UNSELECT_ALL_ICON](state) {
+    state.icons.forEach(icon => {
+      Vue.delete(icon, 'selected', false);
+    });
   }
+
 };
