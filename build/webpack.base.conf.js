@@ -11,9 +11,6 @@ function resolve(dir) {
 }
 
 var envVar = [
-  'OSS_URL',
-  'OSS_AUTH',
-  'OSS_CONTAINER',
   'API_URL'
 ];
 envVar.forEach(varName => {

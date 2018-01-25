@@ -5,12 +5,20 @@ import { api } from '../../utils/request';
 
 export default {
 
-  select({ commit }, icon) {
-    commit('SELECT_ICON', icon);
+  selectAll({ commit }) {
+    commit('SELECT_ALL_ICON');
+  },
+
+  unSelectAll({ commit }) {
+    commit('UNSELECT_ALL_ICON');
+  },
+
+  toggleSelect({ commit }, icon) {
+    commit('TOGGLE_SELECT_ICON', icon);
   },
 
   setSearchName({ commit }, value) {
-    commit('SET_SEARCH_NAME', value)
+    commit('SET_SEARCH_NAME', value);
   },
 
   fetch({ commit }) {
