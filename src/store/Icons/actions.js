@@ -5,12 +5,20 @@ import { api } from '../../utils/request';
 
 export default {
 
-  select({ commit }, icon) {
-    commit('SELECT_ICON', icon);
+  selectAll({ commit }) {
+    commit('SELECT_ALL_ICON');
+  },
+
+  unSelectAll({ commit }) {
+    commit('UNSELECT_ALL_ICON');
+  },
+
+  toggleSelect({ commit }, icon) {
+    commit('TOGGLE_SELECT_ICON', icon);
   },
 
   setSearchName({ commit }, value) {
-    commit('SET_SEARCH_NAME', value)
+    commit('SET_SEARCH_NAME', value);
   },
 
   fetch({ commit }) {
@@ -38,7 +46,7 @@ export default {
         }
         let classes = Object.keys(hash);
         for (let i = 0; i < classes.length; i++) {
-          div.innerHTML = div.innerHTML.replace(new RegExp(classes[i], 'g'), icon.name + '--' + classes[i]);
+          div.innerHTML = div.innerHTML.replace(new RegExp(classes[i], 'g'), icon.name.replace(/\s/g, '-') + '--' + classes[i]);
         }
         icon.raw = div.innerHTML;
       });

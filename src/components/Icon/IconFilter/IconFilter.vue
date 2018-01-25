@@ -1,8 +1,7 @@
 <template>
   <form action=""
     class="icons-filter">
-    <div class="icons-filter__content">
-      <div class="icons-filter__search">
+    <div class="icons-filter__search">
         <input type="text"
           id="icon-search-field"
           placeholder="Search icon"
@@ -15,7 +14,6 @@
             <use href="#magnifyingglass_16px" />
         </svg>
       </div>
-    </div>
   </form>
 </template>
 

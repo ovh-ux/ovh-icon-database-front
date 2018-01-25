@@ -1,3 +1,6 @@
 export const ADD_ICONS = 'ADD_ICONS';
 export const SET_SEARCH_NAME = 'SET_SEARCH_NAME';
+export const TOGGLE_SELECT_ICON = 'TOGGLE_SELECT_ICON';
+export const SELECT_ALL_ICON = 'SELECT_ALL_ICON';
+export const UNSELECT_ALL_ICON = 'UNSELECT_ALL_ICON';
 export const SELECT_ICON = 'SELECT_ICON';
