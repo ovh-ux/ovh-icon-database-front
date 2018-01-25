@@ -3,15 +3,7 @@
         <page-title :pagename="'OVH Icon Database'"></page-title>
         <icon-error v-if="error"></icon-error>
         <div v-else>
-                  <div>
-          <button class="btn btn--primary" @click="selectAllIcons" type="button">
-            <span>Select all</span>
-          </button>
-          <button class="btn btn--primary" @click="unSelectAllIcons" type="button">
-            <span>Unselect all</span>
-          </button>
-        </div>
-            <icon-filter></icon-filter>
+            <icon-actions></icon-actions>
             <transition name="icon-loading" mode="out-in">
                 <icon-loading v-if="loading"></icon-loading>
                 <icon-list v-else></icon-list>
@@ -25,7 +17,7 @@
 import { mapActions, mapGetters } from "vuex";
 
 import PageTitle from "@/components/PageTitle/PageTitle";
-import IconFilter from "@/components/Icon/IconFilter/IconFilter";
+import IconActions from "@/components/Icon/IconActions/IconActions";
 import IconLoading from "@/components/Icon/IconLoading/IconLoading";
 import IconList from "@/components/Icon/IconList/IconList";
 import DownloadPanel from "@/components/Download/DownloadPanel/DownloadPanel";
@@ -55,7 +47,7 @@ export default {
   }),
   components: {
     PageTitle,
-    IconFilter,
+    IconActions,
     IconLoading,
     IconList,
     DownloadPanel,
