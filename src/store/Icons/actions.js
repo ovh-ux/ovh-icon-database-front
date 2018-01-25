@@ -38,7 +38,7 @@ export default {
         }
         let classes = Object.keys(hash);
         for (let i = 0; i < classes.length; i++) {
-          div.innerHTML = div.innerHTML.replace(new RegExp(classes[i], 'g'), icon.name + '--' + classes[i]);
+          div.innerHTML = div.innerHTML.replace(new RegExp(classes[i], 'g'), icon.name.replace(/\s/g, '-') + '--' + classes[i]);
         }
         icon.raw = div.innerHTML;
       });
