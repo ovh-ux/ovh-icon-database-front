@@ -1,0 +1,17 @@
+.icon-actions {
+  display: block;
+  padding: 0 $spaceBase $spaceL2 $spaceBase;
+
+  &__content {
+    padding-bottom: $spaceL2;
+    border-bottom: solid 1px $brandPrimary;
+  }
+
+  @media screen and (min-width: $bpXS) {
+    &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

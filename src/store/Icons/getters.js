@@ -4,7 +4,11 @@ export default {
   },
 
   hasSelected: state => {
-    return state.icons.filter(icon => icon.selected).length;
+    return !!state.icons.filter(icon => icon.selected).length;
+  },
+
+  hasUnselected: state => {
+    return !!state.icons.filter(icon => !icon.selected).length;
   },
 
   count: state => {

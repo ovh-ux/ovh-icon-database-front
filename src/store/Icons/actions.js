@@ -3,23 +3,28 @@ import Zip from 'jszip';
 
 import { api } from '../../utils/request';
 
-const baseUrl = `${process.env.OSS_URL}/v1/${process.env.OSS_AUTH}/${process.env.OSS_CONTAINER}`;
-
 export default {
 
-  select({ commit }, icon) {
-    commit('SELECT_ICON', icon);
+  selectAll({ commit }) {
+    commit('SELECT_ALL_ICON');
+  },
+
+  unSelectAll({ commit }) {
+    commit('UNSELECT_ALL_ICON');
+  },
+
+  toggleSelect({ commit }, icon) {
+    commit('TOGGLE_SELECT_ICON', icon);
   },
 
   setSearchName({ commit }, value) {
-    commit('SET_SEARCH_NAME', value)
+    commit('SET_SEARCH_NAME', value);
   },
 
   fetch({ commit }) {
     return api.get('/api/svg/list').then(response => {
       let icons = response.data.data;
       icons.forEach(icon => {
-        icon.url = `${baseUrl}/${icon.name}`;
         icon.name = icon.name.replace('.svg', '');
 
         let div = document.createElement('div');
@@ -41,7 +46,7 @@ export default {
         }
         let classes = Object.keys(hash);
         for (let i = 0; i < classes.length; i++) {
-          div.innerHTML = div.innerHTML.replace(new RegExp(classes[i], 'g'), icon.name + '--' + classes[i]);
+          div.innerHTML = div.innerHTML.replace(new RegExp(classes[i], 'g'), icon.name.replace(/\s/g, '-') + '--' + classes[i]);
         }
         icon.raw = div.innerHTML;
       });
